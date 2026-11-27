@@ -1,4 +1,4 @@
-window.SLIDES_UPDATED="2026-11-27 09:21";
+window.SLIDES_UPDATED="2026-11-27 10:43";
 window.SLIDES=[{"archivo":"2026-11-03_mp-casos-enrutamiento-genesys.html","meta":{
   "titulo": "MP Casos enrutamiento Genesys",
   "fecha": "2026-11-03",
@@ -1227,6 +1227,21 @@ window.SLIDES=[{"archivo":"2026-11-03_mp-casos-enrutamiento-genesys.html","meta"
  ],
  "notion_url": "https://app.notion.com/p/424eace5de2b80baae03d3b520359de6"
 }},
+{"archivo":"2026-11-26_update-allies-pays.html","meta":{
+ "titulo": "Update Allies Pays",
+ "fecha": "2026-11-26",
+ "hora": "",
+ "area": "Otra",
+ "participantes": [],
+ "temas": ["allies pays", "sin contenido"],
+ "objetivo": "Sin definir: la nota solo recoge una conversación breve sin tema de trabajo claro.",
+ "resultado": "No hubo conclusión clara ni acuerdos de trabajo.",
+ "validacion": { "reunion_adicional": false, "slack": false, "infografia": false, "seguimiento": false },
+ "acciones": [
+  { "accion": "Sin acciones identificadas en la nota", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "" }
+ ],
+ "notion_url": "https://app.notion.com/p/424eace5de2b80279d32e9631b79edcd"
+}},
 {"archivo":"2026-11-27_genesys-migration-daily.html","meta":{
  "titulo": "Genesys Migration daily",
  "fecha": "2026-11-27",
@@ -1258,4 +1273,22 @@ window.SLIDES=[{"archivo":"2026-11-03_mp-casos-enrutamiento-genesys.html","meta"
   { "accion": "Crear una sesión regular de seguimiento de tickets con Genesys", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "" }
  ],
  "notion_url": "https://app.notion.com/p/425eace5de2b81868d37dc3c3217a2f9"
+}},
+{"archivo":"2026-11-27_revision-de-transferencia-de-chats-collections-cx.html","meta":{
+ "titulo": "Revisión de Transferencia de Chats Collections -> CX",
+ "fecha": "2026-11-27",
+ "hora": "10:00",
+ "area": "CX",
+ "participantes": ["Luis Felipe Rodríguez Martínez", "Laura Nathalia Sosa Flórez", "Angie Vanessa Ospina Gonzalez", "Kimberly Kim"],
+ "temas": ["genesys", "enrutamiento", "marketplace", "aliados"],
+ "objetivo": "Aclarar a qué cola se transfieren los chats de Collections hacia CX, para que el cliente no repita su caso desde cero.",
+ "resultado": "Se deja solo el paso directo a Marketplace (los casos en vivo) y a N1 Aliados; ante la duda y para el resto, cola de soporte general.",
+ "validacion": { "reunion_adicional": false, "slack": false, "infografia": false, "seguimiento": false },
+ "acciones": [
+  { "accion": "Pasar a N1 Marketplace los casos de Marketplace o cancelación en proceso", "responsable": "Laura Nathalia Sosa Flórez, Angie Vanessa Ospina Gonzalez", "fecha": "Sin definir", "dependencias": "Certeza de que corresponde a Marketplace" },
+  { "accion": "Ante la duda, enviar el caso al N1 de soporte", "responsable": "Laura Nathalia Sosa Flórez, Angie Vanessa Ospina Gonzalez", "fecha": "Sin definir", "dependencias": "Criterio de certeza del agente" },
+  { "accion": "Enviar casos de aliados al N1 de Aliados", "responsable": "Laura Nathalia Sosa Flórez, Angie Vanessa Ospina Gonzalez", "fecha": "Sin definir", "dependencias": "N1 de Aliados ya en Genesys" },
+  { "accion": "Mantener el resto de casos en la cola de soporte general", "responsable": "Laura Nathalia Sosa Flórez, Angie Vanessa Ospina Gonzalez", "fecha": "Sin definir", "dependencias": "" }
+ ],
+ "notion_url": "https://app.notion.com/p/425eace5de2b817495a7c0a9420727c1"
 }}];
