@@ -422,60 +422,8 @@ function getAct(f, i){
 }
 function setAct(f, i, st){ try { localStorage.setItem(actKey(f, i), JSON.stringify(st)); } catch (e) {} }
 
-function buildPrompt(d, a, st){
-  var L = [];
-  L.push('Ayudame a ejecutar acciones de una reunion usando mis conectores. Sigue el proceso paso a paso y NO ejecutes nada sin mi confirmacion explicita. Mi zona horaria es America/Bogota.');
-  L.push('');
-  L.push('REUNION: ' + d.titulo + ' (' + (d.fecha || 'sin fecha') + (d.hora ? ' ' + d.hora : '') + ')');
-  if (d.participantes.length) L.push('PARTICIPANTES: ' + d.participantes.join(', '));
-  if (d.notion) L.push('NOTA EN NOTION: ' + d.notion);
-  L.push('ACCION: ' + a.accion);
-  L.push('RESPONSABLE: ' + (a.responsable || 'Sin definir'));
-  L.push('FECHA LIMITE: ' + (a.fecha || 'Sin definir'));
-  if (a.dependencias) L.push('DEPENDE DE: ' + a.dependencias);
-  L.push('');
-  L.push('Haz lo siguiente, en este orden y una cosa a la vez. Espera mi respuesta en cada confirmacion:');
-  var n = 1;
-  if (st.cal) {
-    L.push('');
-    L.push(n++ + ') REUNION EN GOOGLE CALENDAR');
-    L.push('  a. Concluye a quienes debo invitar (segun la accion, el responsable y los participantes), busca sus correos y preguntame si son esas personas.');
-    L.push('  b. Proponme el titulo y la duracion de la reunion y preguntame si estan bien.');
-    L.push('  c. Busca en Google Calendar el espacio libre mas proximo para todos los invitados, en horario laboral, y muestramelo.');
-    L.push('  d. Solo cuando yo confirme, crea el evento con los invitados y enlace de Google Meet, y confirmame la fecha, hora y enlace.');
-  }
-  if (st.slack) {
-    L.push('');
-    L.push(n++ + ') MENSAJE POR SLACK');
-    L.push('  a. Concluye a quienes (personas o canal) debo enviar el mensaje y preguntame si son esas personas.');
-    L.push('  b. Proponme el titulo y el texto del mensaje y muestramelo para aprobarlo.');
-    L.push('  c. Solo cuando yo confirme, envialo y confirmame que fue enviado (con el enlace al mensaje si es posible).');
-  }
-  if (st.task) {
-    L.push('');
-    L.push(n++ + ') TAREA EN ' + st.dest.toUpperCase());
-    L.push('  a. Concluye a quien debo asignar la tarea y preguntame si es esa persona.');
-    L.push('  b. Proponme el titulo, la descripcion, el tipo de tarea y el ' + (st.dest === 'Linear' ? 'equipo' : 'proyecto') + ' donde va, y preguntame si estan bien.');
-    L.push('  c. Solo cuando yo confirme, crea la tarea en ' + st.dest + ', asignala y confirmame el numero y el enlace de la tarea.');
-  }
-  return L.join('\n');
-}
-
-function copyText(t){
-  if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(t);
-  return new Promise(function(res, rej){
-    var ta = document.createElement('textarea'); ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0';
-    document.body.appendChild(ta); ta.select();
-    try { document.execCommand('copy') ? res() : rej(); } catch (e) { rej(e); } finally { ta.remove(); }
-  });
-}
-var toastTimer;
-function toast(msg){
-  var el = document.getElementById('toast');
-  if (!el) { el = document.createElement('div'); el.id = 'toast'; el.className = 'toast'; el.setAttribute('role', 'status'); document.body.appendChild(el); }
-  el.textContent = msg; el.hidden = false;
-  clearTimeout(toastTimer); toastTimer = setTimeout(function(){ el.hidden = true; }, 7000);
-}
+var ASSIST_URL = 'https://claude.ai/artifact/FhGAthg3fLzUZjm6d1fuYG';
+function toHex(str){ var u = new TextEncoder().encode(str), o = ''; for (var i = 0; i < u.length; i++) o += u[i].toString(16).padStart(2, '0'); return o; }
 
 var CHEV = '<svg class="chev2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
 
@@ -498,7 +446,7 @@ function bodyHTML(d){
       '<td class="ac"><input type="checkbox" class="ck" data-k="slack" aria-label="Enviar mensaje por Slack"' + (st.slack ? ' checked' : '') + '></td>' +
       '<td class="ac"><input type="checkbox" class="ck" data-k="task" aria-label="Asignar tarea"' + (st.task ? ' checked' : '') + '>' +
         '<select class="dest" aria-label="Herramienta para la tarea"><option' + (st.dest === 'Asana' ? ' selected' : '') + '>Asana</option><option' + (st.dest === 'Linear' ? ' selected' : '') + '>Linear</option></select></td>' +
-      '<td class="ac"><button type="button" class="btn-ia"' + (any ? '' : ' hidden') + '>Preparar con Claude</button></td></tr>';
+      '<td class="ac"><button type="button" class="btn-ia"' + (any ? '' : ' hidden') + '>Ejecutar con asistente</button></td></tr>';
   }).join('');
   var det = (d.resultado || rows)
     ? '<details class="res-det"><summary>Ver resultado y próximos pasos</summary><div class="detail-body">' +
@@ -704,12 +652,10 @@ function init(){
     var b = e.target.closest('.btn-ia'); if (!b) return;
     var tr = b.closest('tr[data-f]'), d = BYFILE[tr.dataset.f], i = +tr.dataset.i;
     if (!d || !d.acciones[i]) return;
-    var win = window.open('https://claude.ai/new', '_blank', 'noopener');
-    copyText(buildPrompt(d, d.acciones[i], getAct(d.archivo, i))).then(function(){
-      toast('Instrucción copiada. En la pestaña de Claude que se abrió, pega con Ctrl + V y presiona Enter.');
-    }, function(){
-      toast('No se pudo copiar automáticamente. Intenta de nuevo.');
-    });
+    var a = d.acciones[i], st = getAct(d.archivo, i);
+    var payload = { t: d.titulo, f: d.fecha, h: d.hora, p: d.participantes, n: d.notion, a: a.accion, r: a.responsable, d: a.fecha, dep: a.dependencias,
+      c: { cal: !!st.cal, slack: !!st.slack, task: !!st.task, dest: st.dest } };
+    window.open(ASSIST_URL + '#a-' + toHex(JSON.stringify(payload)), '_blank', 'noopener');
   });
   $('#results').addEventListener('toggle', function(e){
     var el = e.target;
