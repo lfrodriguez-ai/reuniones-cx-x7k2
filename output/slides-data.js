@@ -1,4 +1,4 @@
-window.SLIDES_UPDATED="2026-11-27 13:19";
+window.SLIDES_UPDATED="2026-11-27 13:39";
 window.SLIDES=[{"archivo":"2026-11-03_mp-casos-enrutamiento-genesys.html","meta":{
   "titulo": "MP Casos enrutamiento Genesys",
   "fecha": "2026-11-03",
@@ -1309,4 +1309,25 @@ window.SLIDES=[{"archivo":"2026-11-03_mp-casos-enrutamiento-genesys.html","meta"
   { "accion": "Mantener el resto de casos en la cola de soporte general", "responsable": "Laura Nathalia Sosa Flórez, Angie Vanessa Ospina Gonzalez", "fecha": "Sin definir", "dependencias": "" }
  ],
  "notion_url": "https://app.notion.com/p/425eace5de2b817495a7c0a9420727c1"
+}},
+{"archivo":"2026-11-27_revision-inflow-y-categorizacion-ad-vs-in-app.html","meta":{
+ "titulo": "Revisión inflow y categorización AD vs in app",
+ "fecha": "2026-11-27",
+ "hora": "12:30",
+ "area": "CX",
+ "participantes": ["Luis Felipe Rodríguez Martínez", "Luis Eduardo Penagos Bermudez", "Maria Fernanda Cajiao Hernandez", "Cristian Avila"],
+ "temas": ["inap", "actualización de datos", "inflow", "tipificación", "bot"],
+ "objetivo": "Entender por qué el inflow de actualización de datos no bajó tras activar INAP y unificar el análisis de Databricks con el verbatín de Cloud.",
+ "resultado": "El bot transfiere a quien no puede entrar. Falta unificar ambos análisis en un solo número y llevarlo a Identity y al bot para definir la solución.",
+ "validacion": { "reunion_adicional": true, "slack": true, "infografia": false, "seguimiento": true },
+ "acciones": [
+  { "accion": "Compartir análisis de la semana anterior y verbatín para fijar el número final", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "2026-11-27", "dependencias": "Calibración de Cristian a las 15:00" },
+  { "accion": "Consultar con Ramiro el cambio de INAP en el bot y su criterio de transferencia", "responsable": "Cristian Avila", "fecha": "Sin definir", "dependencias": "Ramiro" },
+  { "accion": "Hacer match del análisis de Databricks con el verbatín de Cloud (un solo número)", "responsable": "Luis Felipe Rodríguez Martínez, Cristian Avila", "fecha": "Sin definir", "dependencias": "Compartir ambos análisis" },
+  { "accion": "Pasar el porcentaje a Andre para evaluar magic link por correo o IDV", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "Sin definir", "dependencias": "Número unificado; Andre / Identity" },
+  { "accion": "Revisar tipificaciones de Alfred mencionadas por Cristian", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "Sin definir", "dependencias": "Tipificación normal de Alfred" },
+  { "accion": "Evaluar incluir en la caja de tipificación los 4 o 5 parámetros anteriores", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "Sin definir", "dependencias": "" },
+  { "accion": "Reunirse con Lucito para entregar datos a Rami, el Abu y Gise", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Datos consolidados; Laura y Rami buscan solución" }
+ ],
+ "notion_url": "https://app.notion.com/p/425eace5de2b81fd956ee965cce5b2c9"
 }}];
