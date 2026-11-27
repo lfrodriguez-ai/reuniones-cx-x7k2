@@ -479,7 +479,7 @@ function render(){
       });
     }
     lastKeys = groups.map(function(g){ return g.key; });
-    html = '<div class="res-head"><button type="button" class="link" data-act="abrir">Abrir todas las fechas</button><button type="button" class="link" data-act="cerrar">Cerrar todo</button></div>' +
+    html = '<div class="res-head"><button type="button" class="link" data-act="cerrar">Cerrar todo</button></div>' +
       groups.map(function(g){ return dayHTML(g.key, g.label, g.items, state.orden === 'az'); }).join('');
   }
   $('#results').innerHTML = html;
@@ -613,8 +613,24 @@ function init(){
   });
   $('#results').addEventListener('toggle', function(e){
     var el = e.target;
-    if (el.classList.contains('day-acc')) { if (el.open) state.openDays.add(el.dataset.day); else state.openDays.delete(el.dataset.day); }
-    else if (el.classList.contains('mtg')) { if (el.open) state.openMtg.add(el.dataset.id); else state.openMtg.delete(el.dataset.id); }
+    if (el.classList.contains('day-acc')) {
+      if (el.open) {
+        state.openDays.add(el.dataset.day);
+        // Al abrir una fecha se cierran las demas, con sus reuniones
+        document.querySelectorAll('#results .day-acc[open]').forEach(function(o){
+          if (o !== el) { o.open = false; o.querySelectorAll('.mtg[open]').forEach(function(m){ m.open = false; }); }
+        });
+      } else {
+        state.openDays.delete(el.dataset.day);
+        el.querySelectorAll('.mtg[open]').forEach(function(m){ m.open = false; });
+      }
+    } else if (el.classList.contains('mtg')) {
+      if (el.open) {
+        state.openMtg.add(el.dataset.id);
+        // Al abrir una reunion se cierra la que estaba abierta
+        document.querySelectorAll('#results .mtg[open]').forEach(function(o){ if (o !== el) o.open = false; });
+      } else state.openMtg.delete(el.dataset.id);
+    }
   }, true);
   document.addEventListener('click', function(e){ if (!e.target.closest('.dd')) closeAll(); });
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeAll(); });
