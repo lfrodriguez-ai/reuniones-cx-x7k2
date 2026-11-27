@@ -1,4 +1,4 @@
-window.SLIDES_UPDATED="2026-11-27 14:19";
+window.SLIDES_UPDATED="2026-11-27 14:39";
 window.SLIDES=[{"archivo":"2026-11-03_mp-casos-enrutamiento-genesys.html","meta":{
   "titulo": "MP Casos enrutamiento Genesys",
   "fecha": "2026-11-03",
