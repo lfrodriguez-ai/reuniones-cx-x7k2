@@ -114,5 +114,32 @@ td.a{max-width:440px}
   fit();
 })();
 </script>
+<script id="fittext">
+(function(){
+  // Reduce la letra solo en los cuadros donde el texto no cabe
+  function depth(n){ var d = 0; while (n && n !== document.body) { d++; n = n.parentElement; } return d; }
+  function overflows(el){ return el.clientHeight > 16 && el.scrollHeight > el.clientHeight + 2; }
+  function shrink(el){
+    var nodes = [el].concat(Array.prototype.slice.call(el.querySelectorAll('*')));
+    var base = nodes.map(function(n){ var cs = getComputedStyle(n); return { fs: parseFloat(cs.fontSize) || 0, lh: /px$/.test(cs.lineHeight) ? parseFloat(cs.lineHeight) : 0 }; });
+    for (var k = 1; k <= 7 && overflows(el); k++) {
+      var f = Math.pow(0.94, k);
+      nodes.forEach(function(n, i){
+        if (base[i].fs) n.style.fontSize = (base[i].fs * f) + 'px';
+        if (base[i].lh) n.style.lineHeight = (base[i].lh * f) + 'px';
+      });
+    }
+  }
+  function run(){
+    var list = Array.prototype.slice.call(document.body.querySelectorAll('*')).filter(function(el){
+      return !/^(SCRIPT|STYLE|SVG|svg|PATH|path)$/.test(el.tagName) && el.children.length > 0 && overflows(el);
+    });
+    list.sort(function(a, b){ return depth(b) - depth(a); });
+    list.forEach(function(el){ if (overflows(el)) shrink(el); });
+    window.dispatchEvent(new Event('resize'));
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(run); else window.addEventListener('load', run);
+})();
+</script>
 </body>
 </html>
