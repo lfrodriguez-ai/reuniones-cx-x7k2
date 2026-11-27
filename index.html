@@ -423,6 +423,21 @@ function getAct(f, i){
 function setAct(f, i, st){ try { localStorage.setItem(actKey(f, i), JSON.stringify(st)); } catch (e) {} }
 
 var ASSIST_URL = 'https://claude.ai/artifact/FhGAthg3fLzUZjm6d1fuYG';
+function copySync(t){
+  var ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select(); var ok = false;
+  try { ok = document.execCommand('copy'); } catch (e) {}
+  ta.remove();
+  if (!ok && navigator.clipboard) { try { navigator.clipboard.writeText(t); ok = true; } catch (e) {} }
+  return ok;
+}
+var toastTimer;
+function toast(msg){
+  var el = document.getElementById('toast');
+  if (!el) { el = document.createElement('div'); el.id = 'toast'; el.className = 'toast'; el.setAttribute('role', 'status'); document.body.appendChild(el); }
+  el.textContent = msg; el.hidden = false;
+  clearTimeout(toastTimer); toastTimer = setTimeout(function(){ el.hidden = true; }, 8000);
+}
 function toHex(str){ var u = new TextEncoder().encode(str), o = ''; for (var i = 0; i < u.length; i++) o += u[i].toString(16).padStart(2, '0'); return o; }
 
 var CHEV = '<svg class="chev2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
@@ -655,7 +670,10 @@ function init(){
     var a = d.acciones[i], st = getAct(d.archivo, i);
     var payload = { t: d.titulo, f: d.fecha, h: d.hora, p: d.participantes, n: d.notion, a: a.accion, r: a.responsable, d: a.fecha, dep: a.dependencias,
       c: { cal: !!st.cal, slack: !!st.slack, task: !!st.task, dest: st.dest } };
-    window.open(ASSIST_URL + '#a-' + toHex(JSON.stringify(payload)), '_blank', 'noopener');
+    var json = JSON.stringify(payload);
+    var copied = copySync('ADDI-ACCION:' + json);
+    window.open(ASSIST_URL + '#a-' + toHex(json), '_blank', 'noopener');
+    toast(copied ? 'Se abrió el asistente con la acción. Si te pide pegarla, presiona Ctrl + V.' : 'Se abrió el asistente, pero no se pudo copiar la acción. Intenta de nuevo.');
   });
   $('#results').addEventListener('toggle', function(e){
     var el = e.target;
