@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Pruebas pendientes auditoría</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1280px;height:720px;overflow:hidden;background:#fff;color:#111;font-family:'Outfit',sans-serif;font-size:13px;line-height:1.25}
+.wrap{padding:12px 24px 8px}
+h1{color:#1C67DE;font-size:26px;font-weight:700;line-height:1.1}
+.sub{color:#868686;font-size:13px;margin-top:2px}
+.part{font-size:13px;margin-top:2px;max-height:34px;overflow:hidden}
+.part b{color:#1C67DE}
+.mid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;height:296px}
+.left{display:flex;flex-direction:column;gap:6px}
+.box{border:1.5px solid #1C67DE;border-radius:8px;padding:5px 10px;flex:1}
+.box h3{color:#1C67DE;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:2px}
+.box ul{padding-left:16px}
+.right{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px}
+.card{border:1.5px solid #1C67DE;border-radius:8px;padding:6px 10px}
+.card h4{font-size:13px;font-weight:600;color:#111;margin-bottom:4px}
+.tag{display:inline-block;padding:1px 12px;border-radius:12px;font-weight:700;font-size:13px;margin-bottom:3px}
+.si{background:#8CF5F5;color:#111}
+.no{background:#eee;color:#868686}
+.card p{font-size:13px}
+.sec{color:#1C67DE;font-weight:700;font-size:13px;text-transform:uppercase;margin:6px 0 3px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#1C67DE;color:#fff;text-align:left;padding:3px 8px;font-weight:600}
+td{padding:2px 8px;border-bottom:1px solid #dde6f7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:420px}
+td.a{max-width:440px}
+.warn{color:#FF8F43;font-weight:600}
+.foot{color:#868686;font-size:13px;margin-top:4px;display:flex;justify-content:space-between}
+.foot a{color:#1C67DE;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Pruebas pendientes auditoría</h1>
+<div class="sub">10 de noviembre de 2026 · 16:30 (hora Colombia)</div>
+<div class="part"><b>Participantes:</b> Andrea Catalina Martin Rodriguez, Amy Pineda, Dalia Catherine Forero Ramirez, Jorge Daza, Luis Felipe Rodríguez Martínez, Marisol Rojas Rodriguez</div>
+<div class="mid">
+<div class="left">
+<div class="box"><h3>Objetivo / tema principal</h3><p>Completar con auditoría las pruebas pendientes del flujo de PQRS del SAC antes de la salida de Friends and Family.</p></div>
+<div class="box"><h3>Principales temas tratados</h3><ul>
+<li>Prueba en vivo del flujo de PQRS de N1 a cierre</li>
+<li>Conflicto de PQRS abiertas con el mismo motivo</li>
+<li>Réplicas y causa raíz si N1 tipifica mal</li>
+<li>Error en la página web sobre el defensor del consumidor</li>
+<li>Curso anual de SAC para todos los empleados</li>
+</ul></div>
+<div class="box"><h3>Resultado / resumen</h3><p>El flujo completo funcionó. Mientras no haya solución técnica, la contención es operativa: N1 revisa el histórico y actualiza la PQRS abierta. Quedan sin resolver réplicas, causa raíz y la corrección de la página web.</p></div>
+</div>
+<div class="right">
+<div class="card"><h4>¿Reuniones adicionales?</h4><span class="tag si">Sí</span><p>Luis Felipe con desarrollo el 11 de noviembre para definir la contención técnica.</p></div>
+<div class="card"><h4>¿Resúmenes o mensajes de Slack?</h4><span class="tag no">No</span><p>No se pidió; solo informar a auditoría sobre los ajustes decididos.</p></div>
+<div class="card"><h4>¿Infografías o material visual?</h4><span class="tag si">Sí</span><p>Curso de SAC en video con evaluación y protocolo operativo para N1.</p></div>
+<div class="card"><h4>¿Reunión de seguimiento?</h4><span class="tag no">No</span><p>No se mencionó una reunión de seguimiento con auditoría.</p></div>
+</div>
+</div>
+<div class="sec">Next steps</div>
+<table>
+<tr><th style="width:44%">Acción</th><th style="width:15%">Responsable</th><th style="width:12%">Fecha límite</th><th>Dependencias</th></tr>
+<tr><td class="a">Reunión con desarrollo para definir la contención técnica</td><td>Luis Felipe Rodríguez Martínez</td><td>2026-11-11</td><td>Agenda del equipo de desarrollo</td></tr>
+<tr><td class="a">Dejar la tarea técnica en el backlog con control manual</td><td>Luis Felipe Rodríguez Martínez</td><td class="warn">Sin definir</td><td>Definición con desarrollo</td></tr>
+<tr><td class="a">Informar a auditoría cómo se decide ajustar lo hablado</td><td>Luis Felipe Rodríguez Martínez</td><td class="warn">Sin definir</td><td>Definición con desarrollo</td></tr>
+<tr><td class="a">Validar si se corrige el texto del defensor del consumidor</td><td>Luis Felipe Rodríguez Martínez</td><td class="warn">Sin definir</td><td>Quien ajusta la página web</td></tr>
+<tr><td class="a">Lanzar en diciembre el curso de SAC en el Training Center</td><td>Luis Felipe Rodríguez Martínez</td><td class="warn">Sin definir</td><td>Video y evaluación listos</td></tr>
+<tr><td class="a">Actualizar el documento del proceso en Génesis para N1</td><td>Luis Felipe Rodríguez Martínez</td><td class="warn">Sin definir</td><td>Ninguna</td></tr>
+<tr><td class="a">Dar a N1 el protocolo de validar histórico de PQRS antes de la salida</td><td>Luis Felipe Rodríguez Martínez</td><td class="warn">Sin definir</td><td>Fecha de salida a producción</td></tr>
+</table>
+<div class="foot"><span></span><a href="https://app.notion.com/p/414eace5de2b81149059d6822d7224f2">Nota original en Notion</a></div>
+</div>
+<script type="application/json" id="meta">
+{
+  "titulo": "Pruebas pendientes auditoría",
+  "fecha": "2026-11-10",
+  "hora": "16:30",
+  "area": "Cumplimiento y Auditoría",
+  "participantes": ["Andrea Catalina Martin Rodriguez", "Amy Pineda", "Dalia Catherine Forero Ramirez", "Jorge Daza", "Luis Felipe Rodríguez Martínez", "Marisol Rojas Rodriguez"],
+  "temas": ["sac", "auditoria", "pqrs", "genesys", "friends and family"],
+  "objetivo": "Completar con auditoría las pruebas pendientes del flujo de PQRS del SAC antes de la salida de Friends and Family.",
+  "resultado": "El flujo completo funcionó. Mientras no haya solución técnica, la contención es operativa: N1 revisa el histórico y actualiza la PQRS abierta. Quedan sin resolver réplicas, causa raíz y la corrección de la página web.",
+  "validacion": { "reunion_adicional": true, "slack": false, "infografia": true, "seguimiento": false },
+  "acciones": [
+    { "accion": "Reunión con desarrollo para definir la contención técnica", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "2026-11-11", "dependencias": "Agenda del equipo de desarrollo" },
+    { "accion": "Dejar la tarea técnica en el backlog con control manual", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "Sin definir", "dependencias": "Definición con desarrollo" },
+    { "accion": "Informar a auditoría cómo se decide ajustar lo hablado", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "Sin definir", "dependencias": "Definición con desarrollo" },
+    { "accion": "Validar si se corrige el texto del defensor del consumidor", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "Sin definir", "dependencias": "Quien ajusta la página web" },
+    { "accion": "Lanzar en diciembre el curso de SAC en el Training Center", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "Sin definir", "dependencias": "Video y evaluación listos" },
+    { "accion": "Actualizar el documento del proceso en Génesis para N1", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "Sin definir", "dependencias": "" },
+    { "accion": "Dar a N1 el protocolo de validar histórico de PQRS antes de la salida", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "Sin definir", "dependencias": "Fecha de salida a producción" }
+  ],
+  "notion_url": "https://app.notion.com/p/414eace5de2b81149059d6822d7224f2"
+}
+</script>
+<script id="autofit">
+(function(){
+  var html = document.documentElement, body = document.body;
+  function fit(){
+    if (!body) return;
+    body.style.zoom = ''; body.style.marginLeft = ''; html.style.overflow = '';
+    var w = Math.max(html.scrollWidth, body.scrollWidth);
+    var h = Math.max(html.scrollHeight, body.scrollHeight);
+    if (!w || !h) return;
+    var s = Math.min(window.innerWidth / w, window.innerHeight / h, 1);
+    if (s < 0.3) s = 0.3;
+    var ml = parseFloat(getComputedStyle(body).marginLeft) || 0;
+    body.style.zoom = s;
+    var used = w * s;
+    if (used < window.innerWidth - 1) body.style.marginLeft = (ml + (window.innerWidth - used) / 2 / s) + 'px';
+    html.style.overflow = (h * s <= window.innerHeight + 1 && used <= window.innerWidth + 1) ? 'hidden' : '';
+  }
+  var t; function later(){ clearTimeout(t); t = setTimeout(fit, 60); }
+  window.addEventListener('resize', later);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Escalamientos a Fraude via Asana</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;width:1280px;height:720px;overflow:hidden;font-family:'Outfit',sans-serif;color:#111;background:#fff;font-size:13px;line-height:1.25;padding:12px 24px 6px}
+h1{margin:0;font-size:26px;color:#1C67DE;font-weight:700;line-height:1.1}
+.sub{color:#868686;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sub b{color:#111;font-weight:600}
+.mid{display:grid;grid-template-columns:610px 1fr;gap:16px;height:330px;margin-top:8px}
+h2{margin:0 0 4px;font-size:14px;color:#1C67DE;font-weight:700;border-bottom:2px solid #8CF5F5;padding-bottom:2px}
+.left{display:flex;flex-direction:column}
+.stack{display:flex;flex-direction:column;gap:6px;flex:1}
+.box{border:1.5px solid #1C67DE;border-radius:8px;padding:5px 10px;flex:auto}
+.box h3{margin:0 0 2px;font-size:13px;color:#1C67DE;font-weight:600}
+ul{margin:0;padding-left:16px}
+p{margin:0}
+.right{display:flex;flex-direction:column}
+.grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px;flex:1}
+.card{border:1.5px solid #1C67DE;border-radius:8px;padding:6px 10px;overflow:hidden}
+.card .q{font-weight:600;margin-bottom:4px}
+.tag{display:inline-block;padding:0 12px;border-radius:10px;font-weight:700;margin-bottom:4px}
+.si{background:#8CF5F5;color:#111}
+.no{background:#fff;border:1.5px solid #868686;color:#868686;padding:0 10px}
+.card .j{color:#111}
+table{width:100%;border-collapse:collapse;table-layout:fixed;margin-top:2px}
+th{background:#1C67DE;color:#fff;text-align:left;font-weight:600;padding:3px 6px}
+td{padding:2px 6px;border-bottom:1px solid #dfe8f8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:22px}
+.w{background:#FF8F43;color:#111;border-radius:8px;padding:0 6px;font-weight:600}
+.more{color:#868686;margin-top:2px}
+.foot{color:#868686;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.foot a{color:#1C67DE}
+</style>
+</head>
+<body>
+<h1>Escalamientos a Fraude via Asana</h1>
+<div class="sub"><b>5 nov 2026 · 10:00</b> (hora Colombia) · Participantes: Otavio Jordan, Yurley Paez Castro, Luis Felipe Rodríguez Martínez, María Paula Bautista Yépez, Jhon Edwar Morales Urrego</div>
+<div class="mid">
+<div class="left"><h2>Resumen de la reunión</h2><div class="stack">
+<div class="box"><h3>Objetivo / tema principal</h3><p>Corregir el uso de los flujos de escalamiento a Fraude vía Asana, que están recibiendo casos que deberían entrar por Genesys.</p></div>
+<div class="box"><h3>Principales temas tratados</h3><ul>
+<li>BNPN vs BNPL: qué casos sí van por Asana</li>
+<li>Aliados escalan casos que no corresponden (error operativo)</li>
+<li>Doble trabajo: caso en cola de Genesys y en Asana</li>
+<li>Qué hacer con casos que no aplican</li>
+<li>Cambio de nombre del escalamiento de aliados</li></ul></div>
+<div class="box"><h3>Resultado / resumen</h3><p>No se apaga el flujo: se rechazan en Asana los casos que no aplican y se pide montarlos por Genesys. Asana queda solo para casos atípicos de BNPN (máx. 2 por semana).</p></div>
+</div></div>
+<div class="right"><h2>Validación post-reunión</h2><div class="grid">
+<div class="card"><div class="q">¿Se requieren reuniones adicionales?</div><span class="tag si">Sí</span><div class="j">Sesión para depurar casos duplicados entre Genesys y Asana, y alinear con Moni y líderes de aliados.</div></div>
+<div class="card"><div class="q">¿Hay que enviar resúmenes o mensajes de Slack?</div><span class="tag si">Sí</span><div class="j">Mensaje directo a Moni, Juandi y líderes de aliados: crear casos solo por Case Management.</div></div>
+<div class="card"><div class="q">¿Hay que hacer infografías o material visual?</div><span class="tag no">No</span><div class="j">No se mencionó material visual.</div></div>
+<div class="card"><div class="q">¿Hay que programar una reunión de seguimiento?</div><span class="tag no">No</span><div class="j">No se acordó una fecha de seguimiento.</div></div>
+</div></div>
+</div>
+<h2 style="margin-top:6px">Next steps</h2>
+<table>
+<colgroup><col style="width:520px"><col style="width:215px"><col style="width:100px"><col style="width:397px"></colgroup>
+<tr><th>Acción</th><th>Responsable</th><th>Fecha límite</th><th>Dependencias</th></tr>
+<tr><td>Rechazar casos de Asana que no correspondan y pedir montarlos por Genesys</td><td><span class="w">Sin definir</span></td><td><span class="w">Sin definir</span></td><td>Casos que lleguen por Asana</td></tr>
+<tr><td>Alinear con Moni y líderes de aliados que dejen de usar los dos flujos</td><td><span class="w">Sin definir</span></td><td><span class="w">Sin definir</span></td><td>Disponibilidad de entrenadores (Dalí y Anitta)</td></tr>
+<tr><td>Decirle a Juandi que los casos se creen solo por Case Management</td><td><span class="w">Sin definir</span></td><td><span class="w">Sin definir</span></td><td>—</td></tr>
+<tr><td>Renombrar Escalamientos aliados engaño comercial (ej. Interbank Process)</td><td><span class="w">Sin definir</span></td><td><span class="w">Sin definir</span></td><td>Próxima versión del flujo</td></tr>
+<tr><td>Depurar casos duplicados entre cola de desconocimiento y Asana</td><td><span class="w">Sin definir</span></td><td><span class="w">Sin definir</span></td><td>Revisión conjunta de los casos</td></tr>
+<tr><td>Aplicar el cambio de nombre en la próxima versión del flujo</td><td><span class="w">Sin definir</span></td><td><span class="w">Sin definir</span></td><td>Liberación de la próxima versión</td></tr>
+</table>
+<div class="foot" style="margin-top:6px">Nota original: <a href="https://app.notion.com/p/40feace5de2b815ab16dda344acd861b">https://app.notion.com/p/40feace5de2b815ab16dda344acd861b</a></div>
+<script type="application/json" id="meta">
+{
+  "titulo": "Escalamientos a Fraude via Asana",
+  "fecha": "2026-11-05",
+  "hora": "10:00",
+  "area": "Fraude y Riesgo",
+  "participantes": ["Otavio Jordan", "Yurley Paez Castro", "Luis Felipe Rodríguez Martínez", "María Paula Bautista Yépez", "Jhon Edwar Morales Urrego"],
+  "temas": ["fraude", "asana", "genesys", "case management", "bnpn"],
+  "objetivo": "Corregir el uso de los flujos de escalamiento a Fraude vía Asana, que están recibiendo casos que deberían entrar por Genesys.",
+  "resultado": "No se apaga el flujo: se rechazan en Asana los casos que no aplican y se pide montarlos por Genesys. Asana queda solo para casos atípicos de BNPN (máx. 2 por semana).",
+  "validacion": { "reunion_adicional": true, "slack": true, "infografia": false, "seguimiento": false },
+  "acciones": [
+    { "accion": "Rechazar casos de Asana que no correspondan y pedir montarlos por Genesys", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Casos que lleguen por Asana" },
+    { "accion": "Alinear con Moni y líderes de aliados que dejen de usar los dos flujos", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Disponibilidad de entrenadores (Dalí y Anitta)" },
+    { "accion": "Decirle a Juandi que los casos se creen solo por Case Management", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "" },
+    { "accion": "Renombrar Escalamientos aliados engaño comercial (ej. Interbank Process)", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Próxima versión del flujo" },
+    { "accion": "Depurar casos duplicados entre cola de desconocimiento y Asana", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Revisión conjunta de los casos" },
+    { "accion": "Aplicar el cambio de nombre en la próxima versión del flujo", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Liberación de la próxima versión" }
+  ],
+  "notion_url": "https://app.notion.com/p/40feace5de2b815ab16dda344acd861b"
+}
+</script>
+<script id="autofit">
+(function(){
+  var html = document.documentElement, body = document.body;
+  function fit(){
+    if (!body) return;
+    body.style.zoom = ''; body.style.marginLeft = ''; html.style.overflow = '';
+    var w = Math.max(html.scrollWidth, body.scrollWidth);
+    var h = Math.max(html.scrollHeight, body.scrollHeight);
+    if (!w || !h) return;
+    var s = Math.min(window.innerWidth / w, window.innerHeight / h, 1);
+    if (s < 0.3) s = 0.3;
+    var ml = parseFloat(getComputedStyle(body).marginLeft) || 0;
+    body.style.zoom = s;
+    var used = w * s;
+    if (used < window.innerWidth - 1) body.style.marginLeft = (ml + (window.innerWidth - used) / 2 / s) + 'px';
+    html.style.overflow = (h * s <= window.innerHeight + 1 && used <= window.innerWidth + 1) ? 'hidden' : '';
+  }
+  var t; function later(){ clearTimeout(t); t = setTimeout(fit, 60); }
+  window.addEventListener('resize', later);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+})();
+</script>
+</body>
+</html>

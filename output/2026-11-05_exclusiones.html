@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>Exclusiones</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:720px;overflow:hidden;background:#FFFFFF}
+body{font-family:'Outfit',sans-serif;color:#111111;font-size:13px;padding:12px 24px;display:flex;flex-direction:column;gap:8px}
+header{border-bottom:3px solid #1C67DE;padding-bottom:6px;height:62px}
+h1{font-size:24px;color:#1C67DE;font-weight:700;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sub{color:#868686;font-size:13px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mid{display:grid;grid-template-columns:1fr 1fr;gap:12px;height:292px}
+h2{font-size:14px;color:#1C67DE;font-weight:600;margin-bottom:4px;text-transform:uppercase}
+.left{display:flex;flex-direction:column;gap:6px;overflow:hidden}
+.box,.card{border:1.5px solid #1C67DE;border-radius:8px;padding:6px 10px;overflow:hidden}
+.box b{color:#1C67DE;font-size:13px;display:block}
+.box p,.box li{font-size:13px;line-height:1.3}
+ul{padding-left:16px}
+.rt{display:flex;flex-direction:column;overflow:hidden}
+.right{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;flex:1;min-height:0}
+.q{font-weight:600;font-size:13px;line-height:1.25}
+.ans{display:inline-block;padding:1px 12px;border-radius:10px;font-weight:700;margin:3px 0}
+.si{background:#8CF5F5}.no{background:#EEEEEE;color:#868686}
+.j{font-size:13px;line-height:1.3;color:#111111}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+th{background:#1C67DE;color:#fff;text-align:left;font-weight:600;padding:3px 8px;font-size:13px}
+td{padding:3px 8px;border-bottom:1px solid #D9E4F8;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.w{color:#FF8F43;font-weight:600}
+.more{color:#868686;font-size:13px;margin-top:3px}
+footer{color:#868686;font-size:13px;margin-top:auto}
+footer a{color:#1C67DE;text-decoration:none}
+</style></head><body>
+<header><h1>Exclusiones</h1>
+<div class="sub">2026-11-05 · 09:06 (hora Colombia) · Participantes: Sin definir</div></header>
+<div class="mid">
+<div class="left"><h2>Resumen de la reunión</h2>
+<div class="box"><b>Objetivo / tema principal</b><p>Entender el proceso de exclusiones de comunicaciones en SAS para replicarlo (espejo) en el banco / compañía de financiamiento.</p></div>
+<div class="box"><b>Principales temas tratados</b><ul><li>Proceso actual: Asana ejecuta en Databricks (cobranza y marketing)</li><li>Por ley debe quedar un canal activo; excepción solo en cobranza</li><li>Retractación: hoy por PQRS y Data Platform Support</li><li>Espejo para banco: N1 excluye, PQRS gestiona la inclusión</li><li>Riesgo: no está claro quién audita la ejecución</li></ul></div>
+<div class="box"><b>Resultado / resumen</b><p>No hay decisión final. Se propone que el N1 del banco haga las exclusiones y la retractación siga por PQRS. Salida en ocho días; los temas regulatorios no ponen en riesgo la implementación.</p></div></div>
+<div class="rt"><h2>Validación post-reunión</h2><div class="right">
+<div class="card"><div class="q">¿Reuniones adicionales?</div><span class="ans si">Sí</span><div class="j">Con Nico y legal: rectificar estructura y tabla de exclusiones para banco.</div></div>
+<div class="card"><div class="q">¿Resúmenes o mensajes de Slack?</div><span class="ans si">Sí</span><div class="j">Luis etiqueta a Mafe y Nico con el planteamiento del espejo (Asana).</div></div>
+<div class="card"><div class="q">¿Infografías o material visual?</div><span class="ans no">No</span><div class="j">No se habló de material visual.</div></div>
+<div class="card"><div class="q">¿Reunión de seguimiento?</div><span class="ans no">No</span><div class="j">No se mencionó reunión formal ni fecha de seguimiento.</div></div>
+</div></div></div>
+<div class="tb"><h2>Next steps</h2>
+<table><colgroup><col style="width:46%"><col style="width:15%"><col style="width:9%"><col style="width:30%"></colgroup>
+<tr><th>Acción</th><th>Responsable</th><th>Fecha límite</th><th>Dependencias</th></tr>
+<tr><td>Revisar el Notion de tipos de exclusión</td><td class="w">Sin definir</td><td class="w">Sin definir</td><td>Mafe comparte el Notion</td></tr>
+<tr><td>Plantear espejo de exclusiones para banco (Asana) y etiquetar a Mafe y Nico</td><td>Luis</td><td class="w">Sin definir</td><td>Aportes de Mafe y Nico</td></tr>
+<tr><td>Rectificar con Nico y legal la estructura y tabla de exclusiones del banco</td><td class="w">Sin definir</td><td class="w">Sin definir</td><td>Documentación de Nico; legal</td></tr>
+<tr><td>Averiguar quién audita que las exclusiones por Asana se apliquen</td><td class="w">Sin definir</td><td class="w">Sin definir</td><td>Data Platform</td></tr>
+<tr><td>Definir si el N1 del banco gestiona exclusiones e inclusiones o va por PQRS</td><td class="w">Sin definir</td><td class="w">Sin definir</td><td>Postura del equipo PQRS</td></tr>
+</table></div>
+<footer>Nota original: <a href="https://app.notion.com/p/40feace5de2b8055a814e2c116c296d0">https://app.notion.com/p/40feace5de2b8055a814e2c116c296d0</a></footer>
+<script type="application/json" id="meta">
+{
+  "titulo": "Exclusiones",
+  "fecha": "2026-11-05",
+  "hora": "09:06",
+  "area": "CX",
+  "participantes": [],
+  "temas": ["exclusiones", "asana", "databricks", "pqrs", "banco"],
+  "objetivo": "Entender el proceso de exclusiones de comunicaciones en SAS para replicarlo (espejo) en el banco / compañía de financiamiento.",
+  "resultado": "No hay decisión final. Se propone que el N1 del banco haga las exclusiones y la retractación siga por PQRS. Salida en ocho días; los temas regulatorios no ponen en riesgo la implementación.",
+  "validacion": { "reunion_adicional": true, "slack": true, "infografia": false, "seguimiento": false },
+  "acciones": [
+    { "accion": "Revisar el Notion de tipos de exclusión", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Mafe comparte el Notion" },
+    { "accion": "Plantear espejo de exclusiones para banco (Asana) y etiquetar a Mafe y Nico", "responsable": "Luis", "fecha": "Sin definir", "dependencias": "Aportes de Mafe y Nico" },
+    { "accion": "Rectificar con Nico y legal la estructura y tabla de exclusiones del banco", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Documentación de Nico; legal" },
+    { "accion": "Averiguar quién audita que las exclusiones por Asana se apliquen", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Data Platform" },
+    { "accion": "Definir si el N1 del banco gestiona exclusiones e inclusiones o va por PQRS", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Postura del equipo PQRS" }
+  ],
+  "notion_url": "https://app.notion.com/p/40feace5de2b8055a814e2c116c296d0"
+}
+</script>
+<script id="autofit">
+(function(){
+  var html = document.documentElement, body = document.body;
+  function fit(){
+    if (!body) return;
+    body.style.zoom = ''; body.style.marginLeft = ''; html.style.overflow = '';
+    var w = Math.max(html.scrollWidth, body.scrollWidth);
+    var h = Math.max(html.scrollHeight, body.scrollHeight);
+    if (!w || !h) return;
+    var s = Math.min(window.innerWidth / w, window.innerHeight / h, 1);
+    if (s < 0.3) s = 0.3;
+    var ml = parseFloat(getComputedStyle(body).marginLeft) || 0;
+    body.style.zoom = s;
+    var used = w * s;
+    if (used < window.innerWidth - 1) body.style.marginLeft = (ml + (window.innerWidth - used) / 2 / s) + 'px';
+    html.style.overflow = (h * s <= window.innerHeight + 1 && used <= window.innerWidth + 1) ? 'hidden' : '';
+  }
+  var t; function later(){ clearTimeout(t); t = setTimeout(fit, 60); }
+  window.addEventListener('resize', later);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+})();
+</script>
+</body></html>

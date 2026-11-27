@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Genesys Migration daily 13-nov</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1280px;height:720px;overflow:hidden;background:#fff;color:#111;font-family:'Outfit',sans-serif;font-size:13px;line-height:1.25}
+.wrap{padding:12px 24px 8px}
+h1{color:#1C67DE;font-size:26px;font-weight:700;line-height:1.1}
+.sub{color:#868686;font-size:13px;margin-top:2px}
+.part{font-size:13px;margin-top:2px;max-height:34px;overflow:hidden}
+.part b{color:#1C67DE}
+.mid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;height:296px}
+.left{display:flex;flex-direction:column;gap:6px}
+.box{border:1.5px solid #1C67DE;border-radius:8px;padding:5px 10px;flex:1}
+.box h3{color:#1C67DE;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:2px}
+.box ul{padding-left:16px}
+.right{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px}
+.card{border:1.5px solid #1C67DE;border-radius:8px;padding:6px 10px}
+.card h4{font-size:13px;font-weight:600;color:#111;margin-bottom:4px}
+.tag{display:inline-block;padding:1px 12px;border-radius:12px;font-weight:700;font-size:13px;margin-bottom:3px}
+.si{background:#8CF5F5;color:#111}
+.no{background:#eee;color:#868686}
+.card p{font-size:13px}
+.sec{color:#1C67DE;font-weight:700;font-size:13px;text-transform:uppercase;margin:6px 0 3px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#1C67DE;color:#fff;text-align:left;padding:3px 8px;font-weight:600}
+td{padding:2px 8px;border-bottom:1px solid #dde6f7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:420px}
+td.a{max-width:440px}
+.warn{color:#FF8F43;font-weight:600}
+.foot{color:#868686;font-size:13px;margin-top:4px;display:flex;justify-content:space-between}
+.foot a{color:#1C67DE;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Genesys Migration daily 13-nov</h1>
+<div class="sub">13 de noviembre de 2026 · 08:00 (hora Colombia)</div>
+<div class="part"><b>Participantes:</b> Cristian Avila, Juan Sebastian Ramirez Hernandez, Ricardo Andres Lopez Esquivel, Otavio Jordan, Luis Felipe Rodríguez Martínez, Jaime Flautero, Claudia Tabares, Laura Nathalia Sosa Flórez, Yurley Paez Castro, Jessy Alvira</div>
+<div class="mid">
+<div class="left">
+<div class="box"><h3>Objetivo / tema principal</h3><p>Dar seguimiento diario a la migración a Genesys: duplicidad de correos, roles, escalaciones de fin de semana, producción de CF y acceso a datos.</p></div>
+<div class="box"><h3>Principales temas tratados</h3><ul>
+<li>Correos iCloud duplicados en Customer y Genesys: ya solucionado</li>
+<li>Escalaciones de fin de semana sin flujo definido</li>
+<li>Genesys de CF en producción: avance de 70 a 80 por ciento</li>
+<li>Adjuntos y tablas de Silverlight para dashboards de calidad</li>
+<li>Consolidación de correos y cola de la Defensoría</li>
+</ul></div>
+<div class="box"><h3>Resultado / resumen</h3><p>La duplicidad de iCloud se corrigió; falta el barrido y el reporte. Se propone que el agente avise el cambio en un día hábil y la conversación siga activa. Queda por resolver la caída de Databricks y definir los correos de PQRS, Datos y CF.</p></div>
+</div>
+<div class="right">
+<div class="card"><h4>¿Reuniones adicionales?</h4><span class="tag si">Sí</span><p>Con Lucho Penagos para definir escalaciones de fin de semana y su impacto en HT.</p></div>
+<div class="card"><h4>¿Resúmenes o mensajes de Slack?</h4><span class="tag si">Sí</span><p>Update del artefacto al equipo; para CF usar canales privados de Slack sin datos personales.</p></div>
+<div class="card"><h4>¿Infografías o material visual?</h4><span class="tag si">Sí</span><p>Dashboards de calidad con datos de Silverlight (Case Management y adjuntos).</p></div>
+<div class="card"><h4>¿Reunión de seguimiento?</h4><span class="tag si">Sí</span><p>El daily de la migración continúa (sin fecha exacta mencionada).</p></div>
+</div>
+</div>
+<div class="sec">Next steps</div>
+<table>
+<tr><th style="width:44%">Acción</th><th style="width:15%">Responsable</th><th style="width:12%">Fecha límite</th><th>Dependencias</th></tr>
+<tr><td class="a">Barrido de correos iCloud duplicados y reporte de cuántos fueron</td><td>Jaime Flautero</td><td class="warn">Sin definir</td><td>Ninguna</td></tr>
+<tr><td class="a">Definir con Lucho Penagos el manejo de escalaciones de fin de semana</td><td class="warn">Sin definir</td><td class="warn">Sin definir</td><td>Agenda de Lucho Penagos</td></tr>
+<tr><td class="a">Resolver la caída de Databricks del día anterior</td><td>Jaime Flautero</td><td class="warn">Sin definir</td><td>Revisión previa del equipo y apoyo de Julito</td></tr>
+<tr><td class="a">Preguntar por qué falla la tabla Orders de Marketplace en Silverlight</td><td class="warn">Sin definir</td><td class="warn">Sin definir</td><td>Equipo dueño de la tabla (por identificar)</td></tr>
+<tr><td class="a">Revisar si Case Management guarda todos los eventos o solo el último</td><td class="warn">Sin definir</td><td class="warn">Sin definir</td><td>Ninguna</td></tr>
+<tr><td class="a">Crear los correos de los usuarios (15 minutos hoy)</td><td>Jaime Flautero</td><td>2026-11-13</td><td>Cuentas de PQRS, Datos y CF</td></tr>
+<tr><td class="a">Confirmar seguridad desplegada y agregar el permiso con Gise</td><td class="warn">Sin definir</td><td class="warn">Sin definir</td><td>Gise</td></tr>
+<tr><td class="a">Enviar el update del artefacto mencionado al cierre</td><td class="warn">Sin definir</td><td class="warn">Sin definir</td><td>Ninguna</td></tr>
+</table>
+<div class="foot"><span></span><a href="https://app.notion.com/p/417eace5de2b817f8c41fa14a4473389">Nota original en Notion</a></div>
+</div>
+<script type="application/json" id="meta">
+{
+  "titulo": "Genesys Migration daily 13-nov",
+  "fecha": "2026-11-13",
+  "hora": "08:00",
+  "area": "CX",
+  "participantes": ["Cristian Avila", "Juan Sebastian Ramirez Hernandez", "Ricardo Andres Lopez Esquivel", "Otavio Jordan", "Luis Felipe Rodríguez Martínez", "Jaime Flautero", "Claudia Tabares", "Laura Nathalia Sosa Flórez", "Yurley Paez Castro", "Jessy Alvira"],
+  "temas": ["genesys", "migración", "correos", "databricks", "escalaciones"],
+  "objetivo": "Dar seguimiento diario a la migración a Genesys: duplicidad de correos, roles, escalaciones de fin de semana, producción de CF y acceso a datos.",
+  "resultado": "La duplicidad de iCloud se corrigió; falta el barrido y el reporte. Se propone que el agente avise el cambio en un día hábil y la conversación siga activa. Queda por resolver la caída de Databricks y definir los correos de PQRS, Datos y CF.",
+  "validacion": { "reunion_adicional": true, "slack": true, "infografia": true, "seguimiento": true },
+  "acciones": [
+    { "accion": "Barrido de correos iCloud duplicados y reporte de cuántos fueron", "responsable": "Jaime Flautero", "fecha": "Sin definir", "dependencias": "" },
+    { "accion": "Definir con Lucho Penagos el manejo de escalaciones de fin de semana", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Agenda de Lucho Penagos" },
+    { "accion": "Resolver la caída de Databricks del día anterior", "responsable": "Jaime Flautero", "fecha": "Sin definir", "dependencias": "Revisión previa del equipo y apoyo de Julito" },
+    { "accion": "Preguntar por qué falla la tabla Orders de Marketplace en Silverlight", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Equipo dueño de la tabla (por identificar)" },
+    { "accion": "Revisar si Case Management guarda todos los eventos o solo el último", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "" },
+    { "accion": "Crear los correos de los usuarios (15 minutos hoy)", "responsable": "Jaime Flautero", "fecha": "2026-11-13", "dependencias": "Cuentas de PQRS, Datos y CF" },
+    { "accion": "Confirmar seguridad desplegada y agregar el permiso con Gise", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Gise" },
+    { "accion": "Enviar el update del artefacto mencionado al cierre", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "" }
+  ],
+  "notion_url": "https://app.notion.com/p/417eace5de2b817f8c41fa14a4473389"
+}
+</script>
+<script id="autofit">
+(function(){
+  var html = document.documentElement, body = document.body;
+  function fit(){
+    if (!body) return;
+    body.style.zoom = ''; body.style.marginLeft = ''; html.style.overflow = '';
+    var w = Math.max(html.scrollWidth, body.scrollWidth);
+    var h = Math.max(html.scrollHeight, body.scrollHeight);
+    if (!w || !h) return;
+    var s = Math.min(window.innerWidth / w, window.innerHeight / h, 1);
+    if (s < 0.3) s = 0.3;
+    var ml = parseFloat(getComputedStyle(body).marginLeft) || 0;
+    body.style.zoom = s;
+    var used = w * s;
+    if (used < window.innerWidth - 1) body.style.marginLeft = (ml + (window.innerWidth - used) / 2 / s) + 'px';
+    html.style.overflow = (h * s <= window.innerHeight + 1 && used <= window.innerWidth + 1) ? 'hidden' : '';
+  }
+  var t; function later(){ clearTimeout(t); t = setTimeout(fit, 60); }
+  window.addEventListener('resize', later);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+})();
+</script>
+</body>
+</html>

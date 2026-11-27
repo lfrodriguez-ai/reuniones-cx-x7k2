@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>MP Casos enrutamiento Genesys</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:720px;overflow:hidden;background:#fff}
+body{font-family:'Outfit',sans-serif;font-size:13px;color:#111;padding:12px 24px;display:flex;flex-direction:column;gap:8px}
+.hd{border-bottom:3px solid #1C67DE;padding-bottom:5px;height:58px}
+.hd h1{font-size:24px;color:#1C67DE;font-weight:700;line-height:28px;white-space:nowrap}
+.hd p{font-size:13px;color:#868686;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:18px}
+.mid{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:300px}
+.col{display:flex;flex-direction:column;gap:8px;min-height:0}
+.box{border:1.5px solid #1C67DE;border-radius:8px;padding:6px 10px;overflow:hidden}
+.box h2,.card h3{font-size:13px;color:#1C67DE;font-weight:700;margin-bottom:2px}
+.box p,.box li{font-size:13px;line-height:17px}
+.box ul{padding-left:16px}
+.b1{height:62px}.b2{height:112px}.b3{height:90px}
+.grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px;height:100%}
+.card{border:1.5px solid #1C67DE;border-radius:8px;padding:6px 10px;overflow:hidden}
+.card p{font-size:13px;line-height:17px}
+.badge{display:inline-block;font-weight:700;border-radius:10px;padding:0 10px;margin:2px 0 3px;font-size:13px}
+.si{background:#8CF5F5;color:#111}.no{background:#eee;color:#868686}
+.sec{font-size:15px;color:#1C67DE;font-weight:700;margin-bottom:3px}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+th{background:#1C67DE;color:#fff;text-align:left;font-size:13px;font-weight:600;padding:0 8px;height:24px}
+td{border-bottom:1px solid #d9e4f8;padding:0 8px;height:24px;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.w{color:#FF8F43;font-weight:600}
+.more{color:#868686;font-size:13px}
+.ft{font-size:13px;color:#868686;display:flex;justify-content:space-between;height:16px;line-height:16px}
+.ft a{color:#1C67DE;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="hd">
+<h1>MP Casos enrutamiento Genesys</h1>
+<p>3 nov 2026 · 14:03 (hora Colombia) · Participantes: Jenny Marcela Ospina Gonzalez, Daniel Francisco Verano Tenza, Miguel Angel Santana, Otavio Jordan, Luis Felipe Rodríguez Martínez</p>
+</div>
+<div class="mid">
+<div class="col">
+<div class="box b1"><h2>Objetivo / tema principal</h2><p>Priorizar las necesidades críticas de Case Management en Genesys para Marketplace: correo de salida, reasignación, visibilidad del caso y QA.</p></div>
+<div class="box b2"><h2>Principales temas tratados</h2><ul>
+<li>Correo de salida fijo desde back-end (aliados / clientes)</li>
+<li>Espera de reasignación de 10 segundos a 1 hora</li>
+<li>Visualización del caso completo y retomar a bandeja</li>
+<li>QA de la automatización y dashboard de seguimiento</li>
+<li>Casos legado de Customer y aceptar caso / elegibilidad</li>
+</ul></div>
+<div class="box b3"><h2>Resultado / resumen</h2><p>Otavio cambia hoy la espera a 1 hora y revisa permisos, aceptación y correo fijo. Se confirmará la primera ejecución de la automatización de Chris y se armará un dashboard de control. Los casos legado de Customer siguen con doble gestión hasta cerrar su backlog.</p></div>
+</div>
+<div class="col"><div class="grid">
+<div class="card"><h3>¿Reuniones adicionales?</h3><span class="badge si">Sí</span><p>Con Jaime Flautero, para validar si el dashboard de Retool aporta valor.</p></div>
+<div class="card"><h3>¿Resúmenes o mensajes de Slack?</h3><span class="badge no">No</span><p>No se pidió comunicar nada por Slack; los pendientes se cierran en el daily.</p></div>
+<div class="card"><h3>¿Infografías o material visual?</h3><span class="badge no">No</span><p>No se mencionó material visual; solo un dashboard de control.</p></div>
+<div class="card"><h3>¿Reunión de seguimiento?</h3><span class="badge si">Sí</span><p>Daily del 2026-11-04 para cerrar pendientes.</p></div>
+</div></div>
+</div>
+<div>
+<div class="sec">Next steps</div>
+<table>
+<colgroup><col style="width:46%"><col style="width:15%"><col style="width:11%"><col style="width:28%"></colgroup>
+<tr><th>Acción</th><th>Responsable</th><th>Fecha límite</th><th>Dependencias</th></tr>
+<tr><td>Cambiar espera de reasignación a 1 hora (hoy 10 s)</td><td>Otavio Jordan</td><td>2026-11-03</td><td>Ninguna</td></tr>
+<tr><td>Confirmar primera ejecución de la automatización con Chris</td><td>Luis Felipe Rodríguez Martínez</td><td>2026-11-03</td><td>Disponibilidad de Chris</td></tr>
+<tr><td>Armar dashboard de control y seguimiento (Databricks)</td><td>Equipo</td><td>2026-11-04</td><td>Confirmación de Chris</td></tr>
+<tr><td>Fijar correo de salida desde back-end y validar con ingenieros</td><td>Otavio Jordan</td><td>2026-11-13</td><td>Validación de ingenieros</td></tr>
+<tr><td>Habilitar 'retomar a mi bandeja' y ver caso completo</td><td>Otavio Jordan</td><td class="w">Sin definir</td><td>Permiso o configuración; prueba posterior</td></tr>
+<tr><td>Investigar aceptar caso y 'hacerse elegible' automático</td><td>Otavio Jordan</td><td class="w">Sin definir</td><td>Ligado a la reasignación</td></tr>
+<tr><td>Confirmar si PQRS aplica a correos al cliente</td><td>Otavio Jordan</td><td class="w">Sin definir</td><td>Ninguna</td></tr>
+<tr><td>Validar con Jaime si el dashboard de Retool aporta valor</td><td>Equipo</td><td class="w">Sin definir</td><td>Licencias de Retool y migración futura</td></tr>
+</table>
+<div class="ft"><span><span class="more">+1 acciones más en la nota original</span></span><a href="https://app.notion.com/p/40deace5de2b81d695bbd81746074d03">Nota original en Notion</a></div>
+</div>
+<script type="application/json" id="meta">
+{
+  "titulo": "MP Casos enrutamiento Genesys",
+  "fecha": "2026-11-03",
+  "hora": "14:03",
+  "area": "CX",
+  "participantes": ["Jenny Marcela Ospina Gonzalez", "Daniel Francisco Verano Tenza", "Miguel Angel Santana", "Otavio Jordan", "Luis Felipe Rodríguez Martínez"],
+  "temas": ["genesys", "case management", "marketplace", "enrutamiento", "dashboard"],
+  "objetivo": "Priorizar las necesidades críticas de Case Management en Genesys para Marketplace: correo de salida, reasignación, visibilidad del caso y QA.",
+  "resultado": "Otavio cambia hoy la espera a 1 hora y revisa permisos, aceptación y correo fijo. Se confirmará la primera ejecución de la automatización de Chris y se armará un dashboard de control. Los casos legado de Customer siguen con doble gestión hasta cerrar su backlog.",
+  "validacion": { "reunion_adicional": true, "slack": false, "infografia": false, "seguimiento": true },
+  "acciones": [
+    { "accion": "Cambiar espera de reasignación a 1 hora (hoy 10 s)", "responsable": "Otavio Jordan", "fecha": "2026-11-03", "dependencias": "Ninguna" },
+    { "accion": "Confirmar primera ejecución de la automatización con Chris", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "2026-11-03", "dependencias": "Disponibilidad de Chris" },
+    { "accion": "Armar dashboard de control y seguimiento (Databricks)", "responsable": "Equipo", "fecha": "2026-11-04", "dependencias": "Confirmación de Chris" },
+    { "accion": "Fijar correo de salida desde back-end y validar con ingenieros", "responsable": "Otavio Jordan", "fecha": "2026-11-13", "dependencias": "Validación de ingenieros" },
+    { "accion": "Habilitar 'retomar a mi bandeja' y ver caso completo", "responsable": "Otavio Jordan", "fecha": "Sin definir", "dependencias": "Permiso o configuración; prueba posterior" },
+    { "accion": "Investigar aceptar caso y 'hacerse elegible' automático", "responsable": "Otavio Jordan", "fecha": "Sin definir", "dependencias": "Ligado a la reasignación" },
+    { "accion": "Confirmar si PQRS aplica a correos al cliente", "responsable": "Otavio Jordan", "fecha": "Sin definir", "dependencias": "Ninguna" },
+    { "accion": "Validar con Jaime si el dashboard de Retool aporta valor", "responsable": "Equipo", "fecha": "Sin definir", "dependencias": "Licencias de Retool y migración futura" },
+    { "accion": "Cerrar los pendientes en el daily de mañana", "responsable": "Equipo", "fecha": "2026-11-04", "dependencias": "Avance de las demás acciones" }
+  ],
+  "notion_url": "https://app.notion.com/p/40deace5de2b81d695bbd81746074d03"
+}
+</script>
+<script id="autofit">
+(function(){
+  var html = document.documentElement, body = document.body;
+  function fit(){
+    if (!body) return;
+    body.style.zoom = ''; body.style.marginLeft = ''; html.style.overflow = '';
+    var w = Math.max(html.scrollWidth, body.scrollWidth);
+    var h = Math.max(html.scrollHeight, body.scrollHeight);
+    if (!w || !h) return;
+    var s = Math.min(window.innerWidth / w, window.innerHeight / h, 1);
+    if (s < 0.3) s = 0.3;
+    var ml = parseFloat(getComputedStyle(body).marginLeft) || 0;
+    body.style.zoom = s;
+    var used = w * s;
+    if (used < window.innerWidth - 1) body.style.marginLeft = (ml + (window.innerWidth - used) / 2 / s) + 'px';
+    html.style.overflow = (h * s <= window.innerHeight + 1 && used <= window.innerWidth + 1) ? 'hidden' : '';
+  }
+  var t; function later(){ clearTimeout(t); t = setTimeout(fit, 60); }
+  window.addEventListener('resize', later);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+})();
+</script>
+</body>
+</html>

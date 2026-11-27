@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>Migración de Casos Marketplace (Kustomer -> Genesys)</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1280px;height:720px;overflow:hidden;background:#fff;color:#111;font-family:'Outfit',sans-serif;font-size:13px;padding:14px 24px;display:flex;flex-direction:column;gap:8px}
+h1{color:#1C67DE;font-size:26px;font-weight:700;line-height:1.1}
+.sub{color:#868686;font-size:13px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mid{display:flex;gap:14px;height:290px}
+.col{flex:1;display:flex;flex-direction:column;gap:6px;min-width:0}
+.h2{color:#1C67DE;font-weight:600;font-size:15px}
+.box{border:1.5px solid #1C67DE;border-radius:8px;padding:6px 10px;flex:1;overflow:hidden}
+.box b{color:#1C67DE;font-size:13px;display:block;margin-bottom:2px}
+.box ul{padding-left:16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;flex:1}
+.card{border:1.5px solid #1C67DE;border-radius:8px;padding:6px 10px;overflow:hidden}
+.q{font-weight:600;font-size:13px;margin-bottom:3px}
+.ans{display:inline-block;font-weight:700;padding:0 10px;border-radius:10px;margin-bottom:3px}
+.si{background:#8CF5F5;color:#111}.no{background:#eee;color:#868686}
+.j{font-size:13px;line-height:1.25}
+table{width:100%;border-collapse:collapse}
+th{background:#1C67DE;color:#fff;text-align:left;padding:3px 8px;font-weight:600}
+td{border-bottom:1px solid #1C67DE55;padding:2px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:520px}
+td.w{color:#FF8F43;font-weight:600}td.g{color:#868686}
+.foot{color:#868686;font-size:13px}
+</style></head><body>
+<div><h1>Migración de Casos Marketplace (Kustomer -&gt; Genesys)</h1><div class="sub">2026-11-23 14:30 · 7 participantes: Daniel Francisco Verano Tenza, Jenny Marcela Ospina Gonzalez, Otavio Jordan, Jebialje Jesus Lopez Oropeza, Federico Hosen, Luis Felipe Rodríguez Martínez y otros</div></div>
+<div class="mid">
+<div class="col"><div class="h2">Resumen de la reunión</div>
+<div class="box"><b>Objetivo / tema principal</b>Definir la migración total de ~1.500 casos de Marketplace de Kustomer a Genesys el 30 de noviembre.</div>
+<div class="box" style="flex:1.6"><b>Principales temas tratados</b><ul><li>Decisión: migración total y apagar las licencias de Kustomer</li><li>Riesgo principal: perder la priorización por antigüedad en Genesys</li><li>Asignación por cola en Genesys sigue sin resolverse</li><li>Licencias: Plan A descartado; Plan B mantiene licencias al 30 de noviembre</li><li>Mecánica: lista de casos, corte de gestión y Kustomer en solo lectura</li></ul></div>
+<div class="box"><b>Resultado / resumen</b>Se avanza hacia la migración total el 30 de noviembre, sin comprometerse hasta validar pruebas con 5, 10 y 20 casos. Quedarían ~80-100 casos pendientes.</div></div>
+<div class="col"><div class="h2">Validación post-reunión</div><div class="grid">
+<div class="card"><div class="q">¿Reuniones adicionales?</div><span class="ans si">Sí</span><div class="j">Pedir reunión para la prueba de migración mayor del viernes.</div></div>
+<div class="card"><div class="q">¿Resúmenes o Slack?</div><span class="ans si">Sí</span><div class="j">Levantar la mano a Finanzas por licencias de Kustomer; canal sin definir.</div></div>
+<div class="card"><div class="q">¿Infografías o material visual?</div><span class="ans no">No</span><div class="j">No se mencionó material visual.</div></div>
+<div class="card"><div class="q">¿Reunión de seguimiento?</div><span class="ans si">Sí</span><div class="j">Prueba mayor planteada para el viernes 27 de noviembre.</div></div>
+</div></div>
+</div>
+<div><div class="h2" style="margin-bottom:3px">Next steps</div>
+<table><tr><th style="width:560px">Acción</th><th style="width:150px">Responsable</th><th style="width:110px">Fecha límite</th><th>Dependencias</th></tr>
+<tr><td>Armar plan de trabajo con expectativas de cierre de los ~1.500 casos</td><td>Equipo Marketplace</td><td class="w">Sin definir</td><td>Compartirlo para revisión</td></tr>
+<tr><td>Organizar lista de atributos a migrar (adjuntos, correos, órdenes, PQR)</td><td>Equipo Marketplace</td><td class="w">Sin definir</td><td>Fede necesita saber qué incluir</td></tr>
+<tr><td>Corroborar que el dashboard de Databricks muestre todo lo del sub-orden</td><td class="w">Sin definir</td><td class="w">Sin definir</td><td></td></tr>
+<tr><td>Hacer pruebas de migración con 5, 10 y 20 casos; prueba mayor el viernes</td><td class="w">Sin definir</td><td>2026-11-27</td><td>Reunión por pedir</td></tr>
+<tr><td>Tomar casos testigo de las preocupaciones y acelerar si funcionan</td><td class="w">Sin definir</td><td class="w">Sin definir</td><td>Resultado de las pruebas</td></tr>
+<tr><td>Pasar tabla que cruce ID de Kustomer, radicado e ID de Genesys</td><td class="w">Sin definir</td><td class="w">Sin definir</td><td></td></tr>
+<tr><td>Alinear con Gisela y Ríos licencias y costos</td><td class="w">Sin definir</td><td>2026-11-30</td><td>Cierre de licencias el 30 de noviembre</td></tr>
+<tr><td>Pedir a Finanzas mantener licencias de Kustomer hasta el 30 de noviembre</td><td class="w">Sin definir</td><td>2026-11-30</td><td>Aprobación de Finanzas</td></tr>
+<tr><td colspan="4" class="g">+1 acciones más en la nota original</td></tr>
+</table></div>
+<div class="foot">Nota original: https://app.notion.com/p/421eace5de2b81f395ced39c28f28be1</div>
+<script type="application/json" id="meta">
+{
+ "titulo": "Migración de Casos Marketplace (Kustomer -> Genesys)",
+ "fecha": "2026-11-23",
+ "hora": "14:30",
+ "area": "CX",
+ "participantes": ["Daniel Francisco Verano Tenza", "Jenny Marcela Ospina Gonzalez", "Otavio Jordan", "Jebialje Jesus Lopez Oropeza", "Federico Hosen", "Luis Felipe Rodríguez Martínez", "Miguel Angel Santana"],
+ "temas": ["marketplace", "genesys", "kustomer", "migración", "licencias"],
+ "objetivo": "Definir la migración total de ~1.500 casos de Marketplace de Kustomer a Genesys el 30 de noviembre.",
+ "resultado": "Se avanza hacia la migración total el 30 de noviembre, sin comprometerse hasta validar pruebas con 5, 10 y 20 casos. Quedarían ~80-100 casos pendientes.",
+ "validacion": { "reunion_adicional": true, "slack": true, "infografia": false, "seguimiento": true },
+ "acciones": [
+  { "accion": "Armar plan de trabajo con expectativas de cierre de los ~1.500 casos", "responsable": "Equipo Marketplace", "fecha": "Sin definir", "dependencias": "Compartirlo para revisión" },
+  { "accion": "Organizar lista de atributos a migrar (adjuntos, correos, órdenes, PQR)", "responsable": "Equipo Marketplace", "fecha": "Sin definir", "dependencias": "Fede necesita saber qué incluir" },
+  { "accion": "Corroborar que el dashboard de Databricks muestre todo lo del sub-orden", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "" },
+  { "accion": "Hacer pruebas de migración con 5, 10 y 20 casos; prueba mayor el viernes", "responsable": "Sin definir", "fecha": "2026-11-27", "dependencias": "Reunión por pedir" },
+  { "accion": "Tomar casos testigo de las preocupaciones y acelerar si funcionan", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Resultado de las pruebas" },
+  { "accion": "Pasar tabla que cruce ID de Kustomer, radicado e ID de Genesys", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "" },
+  { "accion": "Alinear con Gisela y Ríos licencias y costos", "responsable": "Sin definir", "fecha": "2026-11-30", "dependencias": "Cierre de licencias el 30 de noviembre" },
+  { "accion": "Pedir a Finanzas mantener licencias de Kustomer hasta el 30 de noviembre", "responsable": "Sin definir", "fecha": "2026-11-30", "dependencias": "Aprobación de Finanzas" },
+  { "accion": "Confirmar con Genesys priorización por antigüedad y asignación por cola", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Respuesta de Genesys" }
+ ],
+ "notion_url": "https://app.notion.com/p/421eace5de2b81f395ced39c28f28be1"
+}
+</script>
+<script id="autofit">
+(function(){
+  var html = document.documentElement, body = document.body;
+  function fit(){
+    if (!body) return;
+    body.style.zoom = ''; body.style.marginLeft = ''; html.style.overflow = '';
+    var w = Math.max(html.scrollWidth, body.scrollWidth);
+    var h = Math.max(html.scrollHeight, body.scrollHeight);
+    if (!w || !h) return;
+    var s = Math.min(window.innerWidth / w, window.innerHeight / h, 1);
+    if (s < 0.3) s = 0.3;
+    var ml = parseFloat(getComputedStyle(body).marginLeft) || 0;
+    body.style.zoom = s;
+    var used = w * s;
+    if (used < window.innerWidth - 1) body.style.marginLeft = (ml + (window.innerWidth - used) / 2 / s) + 'px';
+    html.style.overflow = (h * s <= window.innerHeight + 1 && used <= window.innerWidth + 1) ? 'hidden' : '';
+  }
+  var t; function later(){ clearTimeout(t); t = setTimeout(fit, 60); }
+  window.addEventListener('resize', later);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+})();
+</script>
+</body></html>

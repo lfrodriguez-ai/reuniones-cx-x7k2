@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Review Genesys CF</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1280px;height:720px;overflow:hidden;background:#fff;color:#111;font-family:'Outfit',sans-serif;font-size:13px;line-height:1.25;padding:14px 24px}
+.head{height:62px;border-bottom:3px solid #1C67DE;padding-bottom:6px}
+.head h1{font-size:26px;color:#1C67DE;font-weight:700;line-height:1.1}
+.head .m{color:#868686;font-size:13px;margin-top:2px}
+.head .p{font-size:13px;margin-top:2px}
+.mid{display:flex;gap:16px;height:290px;margin-top:10px}
+.left{width:600px;display:flex;flex-direction:column;gap:8px}
+.box{border:2px solid #1C67DE;border-radius:8px;padding:6px 10px;overflow:hidden}
+.box h2,.card h2{font-size:13px;color:#1C67DE;font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:3px}
+.box ul{padding-left:16px}
+.right{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px}
+.card{border:2px solid #1C67DE;border-radius:8px;padding:6px 10px;overflow:hidden}
+.ans{display:inline-block;font-weight:700;padding:0 10px;border-radius:10px;margin-bottom:3px}
+.si{background:#8CF5F5;color:#111}.no{background:#eee;color:#868686}
+.bot{margin-top:10px}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+th{background:#1C67DE;color:#fff;text-align:left;padding:3px 8px;font-weight:600}
+td{padding:2px 8px;border-bottom:1px solid #d9e4f8;vertical-align:top;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.warn{color:#FF8F43;font-weight:600}
+.more{color:#868686;font-size:13px;margin-top:2px}
+.foot{position:absolute;left:24px;bottom:8px;font-size:13px;color:#868686}
+.foot a{color:#1C67DE}
+</style>
+</head>
+<body>
+<div class="head">
+<h1>Review Genesys CF</h1>
+<div class="m">2026-11-05 · 15:58 (hora Colombia)</div>
+<div class="p"><b>Participantes:</b> Jaime Flautero, Luis Felipe Rodríguez Martínez</div>
+</div>
+<div class="mid">
+<div class="left">
+<div class="box"><h2>Objetivo / tema principal</h2>Probar en sandbox el flujo de Genesys Cloud con el chatbot y el botón de actualización de PQRS, y preparar la demo en vivo para auditoría.</div>
+<div class="box" style="flex:1"><h2>Principales temas tratados</h2><ul>
+<li>Inconsistencia del estado de un comercio (aprobado en chat, no en estado)</li>
+<li>Enrutamiento: el bot transfiere pero no hay cola ni alerta al agente</li>
+<li>Fallo al editar caso y correo dirigido a otra persona</li>
+<li>Asignación manual a N1 entra en conflicto con el enrutamiento</li>
+<li>Demo de las 10 a.m. y prep call previa</li>
+</ul></div>
+<div class="box"><h2>Resultado / resumen</h2>Se detectaron fallas en enrutamiento y edición del caso. Se acordó una prep call a las 9:30, relanzar pruebas de inmediato y hacer la demo en vivo el viernes 6 a las 10 a.m.</div>
+</div>
+<div class="right">
+<div class="card"><h2>¿Reuniones adicionales?</h2><span class="ans si">Sí</span><div>Prep call 9:30 y daily de 30 min hacia las 12:00 con el equipo más impactado.</div></div>
+<div class="card"><h2>¿Resúmenes o Slack?</h2><span class="ans si">Sí</span><div>Grupo interno con Lucho y Juanma para coordinar pruebas del caso.</div></div>
+<div class="card"><h2>¿Infografías o material visual?</h2><span class="ans si">Sí</span><div>Se mencionó revisar la falta de visuales de legal (por aclarar).</div></div>
+<div class="card"><h2>¿Reunión de seguimiento?</h2><span class="ans si">Sí</span><div>Daily de 30 min hacia las 12:00-12:30 del 2026-11-06.</div></div>
+</div>
+</div>
+<div class="bot">
+<table>
+<colgroup><col style="width:46%"><col style="width:14%"><col style="width:12%"><col style="width:28%"></colgroup>
+<thead><tr><th>Acción</th><th>Responsable</th><th>Fecha límite</th><th>Dependencias</th></tr></thead>
+<tbody>
+<tr><td>Demo en vivo para auditoría (correo, caso, estado PQRS)</td><td class="warn">Sin definir</td><td>2026-11-06</td><td>Prep call y agente N1 conectado</td></tr>
+<tr><td>Prep call 9:30 para preparar demo de N1</td><td class="warn">Sin definir</td><td>2026-11-06</td><td>Equipo de vulnerabilidades</td></tr>
+<tr><td>Habilitar de nuevo el chatbot en entorno de prueba</td><td>Juanma</td><td class="warn">Sin definir</td><td>Sin dependencias</td></tr>
+<tr><td>Lanzar pruebas desde cero sin esperar las 9:30</td><td class="warn">Sin definir</td><td>2026-11-06</td><td>Chatbot habilitado</td></tr>
+<tr><td>Crear caso nuevo, avisar y conectarse para ver dónde queda</td><td class="warn">Sin definir</td><td class="warn">Sin definir</td><td>Lucho y Juanma</td></tr>
+<tr><td>Resolver cómo cubrir la prueba de actualización PQRS desde N1</td><td class="warn">Sin definir</td><td class="warn">Sin definir</td><td>Agente N1 conectado, bot y caso activo</td></tr>
+<tr><td>Averiguar dónde se asignan casos del bot y verlos en Databricks</td><td class="warn">Sin definir</td><td class="warn">Sin definir</td><td>Dashboards de Databricks</td></tr>
+<tr><td>Invitar a Lore Corredor al daily de las 8 a.m. para que se conecte</td><td class="warn">Sin definir</td><td>2026-11-06</td><td>Daily de las 8 a.m.</td></tr>
+</tbody>
+</table>
+<div class="more">+2 acciones más en la nota original</div>
+</div>
+<div class="foot">Nota original: <a href="https://app.notion.com/p/40feace5de2b815b9abde76a8f6d0c20">https://app.notion.com/p/40feace5de2b815b9abde76a8f6d0c20</a></div>
+<script type="application/json" id="meta">
+{
+  "titulo": "Review Genesys CF",
+  "fecha": "2026-11-05",
+  "hora": "15:58",
+  "area": "CX",
+  "participantes": ["Jaime Flautero", "Luis Felipe Rodríguez Martínez"],
+  "temas": ["genesys", "pqrs", "demo auditoría", "enrutamiento", "chatbot"],
+  "objetivo": "Probar en sandbox el flujo de Genesys Cloud con el chatbot y el botón de actualización de PQRS, y preparar la demo en vivo para auditoría.",
+  "resultado": "Se detectaron fallas en enrutamiento y edición del caso. Se acordó una prep call a las 9:30, relanzar pruebas de inmediato y hacer la demo en vivo el viernes 6 a las 10 a.m.",
+  "validacion": { "reunion_adicional": true, "slack": true, "infografia": true, "seguimiento": true },
+  "acciones": [
+    { "accion": "Demo en vivo para auditoría (correo, caso, estado PQRS)", "responsable": "Sin definir", "fecha": "2026-11-06", "dependencias": "Prep call y agente N1 conectado" },
+    { "accion": "Prep call 9:30 para preparar demo de N1", "responsable": "Sin definir", "fecha": "2026-11-06", "dependencias": "Equipo de vulnerabilidades" },
+    { "accion": "Habilitar de nuevo el chatbot en entorno de prueba", "responsable": "Juanma", "fecha": "Sin definir", "dependencias": "" },
+    { "accion": "Lanzar pruebas desde cero sin esperar las 9:30", "responsable": "Sin definir", "fecha": "2026-11-06", "dependencias": "Chatbot habilitado" },
+    { "accion": "Crear caso nuevo, avisar y conectarse para ver dónde queda", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Lucho y Juanma" },
+    { "accion": "Resolver cómo cubrir la prueba de actualización PQRS desde N1", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Agente N1 conectado, bot y caso activo" },
+    { "accion": "Averiguar dónde se asignan casos del bot y verlos en Databricks", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Dashboards de Databricks" },
+    { "accion": "Invitar a Lore Corredor al daily de las 8 a.m. para que se conecte", "responsable": "Sin definir", "fecha": "2026-11-06", "dependencias": "Daily de las 8 a.m." },
+    { "accion": "Armar un daily de 30 minutos hacia las 12:00-12:30 con el equipo más impactado", "responsable": "Sin definir", "fecha": "2026-11-06", "dependencias": "Disponibilidad del equipo más impactado" },
+    { "accion": "Revisar la falta de visuales de legal", "responsable": "Sin definir", "fecha": "2026-11-06", "dependencias": "" }
+  ],
+  "notion_url": "https://app.notion.com/p/40feace5de2b815b9abde76a8f6d0c20"
+}
+</script>
+<script id="autofit">
+(function(){
+  var html = document.documentElement, body = document.body;
+  function fit(){
+    if (!body) return;
+    body.style.zoom = ''; body.style.marginLeft = ''; html.style.overflow = '';
+    var w = Math.max(html.scrollWidth, body.scrollWidth);
+    var h = Math.max(html.scrollHeight, body.scrollHeight);
+    if (!w || !h) return;
+    var s = Math.min(window.innerWidth / w, window.innerHeight / h, 1);
+    if (s < 0.3) s = 0.3;
+    var ml = parseFloat(getComputedStyle(body).marginLeft) || 0;
+    body.style.zoom = s;
+    var used = w * s;
+    if (used < window.innerWidth - 1) body.style.marginLeft = (ml + (window.innerWidth - used) / 2 / s) + 'px';
+    html.style.overflow = (h * s <= window.innerHeight + 1 && used <= window.innerWidth + 1) ? 'hidden' : '';
+  }
+  var t; function later(){ clearTimeout(t); t = setTimeout(fit, 60); }
+  window.addEventListener('resize', later);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+})();
+</script>
+</body>
+</html>

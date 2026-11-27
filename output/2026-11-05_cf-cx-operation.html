@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>CF CX Operation</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:720px;overflow:hidden;background:#FFFFFF}
+body{font-family:'Outfit',sans-serif;color:#111111;font-size:13px;padding:12px 24px;display:flex;flex-direction:column;gap:8px}
+header{border-bottom:3px solid #1C67DE;padding-bottom:6px;height:62px}
+h1{font-size:24px;color:#1C67DE;font-weight:700;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sub{color:#868686;font-size:13px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mid{display:grid;grid-template-columns:1fr 1fr;gap:12px;height:292px}
+h2{font-size:14px;color:#1C67DE;font-weight:600;margin-bottom:4px;text-transform:uppercase}
+.left{display:flex;flex-direction:column;gap:6px;overflow:hidden}
+.box,.card{border:1.5px solid #1C67DE;border-radius:8px;padding:6px 10px;overflow:hidden}
+.box b{color:#1C67DE;font-size:13px;display:block}
+.box p,.box li{font-size:13px;line-height:1.3}
+ul{padding-left:16px}
+.rt{display:flex;flex-direction:column;overflow:hidden}
+.right{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;flex:1;min-height:0}
+.q{font-weight:600;font-size:13px;line-height:1.25}
+.ans{display:inline-block;padding:1px 12px;border-radius:10px;font-weight:700;margin:3px 0}
+.si{background:#8CF5F5}.no{background:#EEEEEE;color:#868686}
+.j{font-size:13px;line-height:1.3;color:#111111}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+th{background:#1C67DE;color:#fff;text-align:left;font-weight:600;padding:3px 8px;font-size:13px}
+td{padding:3px 8px;border-bottom:1px solid #D9E4F8;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.w{color:#FF8F43;font-weight:600}
+.more{color:#868686;font-size:13px;margin-top:3px}
+footer{color:#868686;font-size:13px;margin-top:auto}
+footer a{color:#1C67DE;text-decoration:none}
+</style></head><body>
+<header><h1>CF CX Operation</h1>
+<div class="sub">2026-11-05 · 09:30 (hora Colombia) · Participantes: Otavio Jordan, Luis Felipe Rodríguez Martínez</div></header>
+<div class="mid">
+<div class="left"><h2>Resumen de la reunión</h2>
+<div class="box"><b>Objetivo / tema principal</b><p>Revisar uno a uno los hallazgos pendientes de Auditoría de CF y verificar su estado operativo.</p></div>
+<div class="box"><b>Principales temas tratados</b><ul><li>Extractos y certificados: dependen de producto/API, no de CX</li><li>Retool y contacto de Génesis: pendiente por riesgo de seguridad</li><li>Vigencia del IDV de 1 hora: no crítico</li><li>Prueba del chatbot y OTP en producción: sin respuesta</li><li>PQRS, Smart Supervision y encuesta de WhatsApp</li></ul></div>
+<div class="box"><b>Resultado / resumen</b><p>La mayoría de ajustes son de forma y no de fondo, y la operación ya funciona. Siguen pendientes la prueba del chatbot en producción, la prueba punta a punta de PQRS y los pantallazos de Smart Supervision.</p></div></div>
+<div class="rt"><h2>Validación post-reunión</h2><div class="right">
+<div class="card"><div class="q">¿Reuniones adicionales?</div><span class="ans si">Sí</span><div class="j">Con Sam, Julio y Jaime: validar IDV, filtro de Databricks y paso a producción.</div></div>
+<div class="card"><div class="q">¿Resúmenes o mensajes de Slack?</div><span class="ans si">Sí</span><div class="j">Otavio comparte a Luis Felipe el resultado de la prueba PQRS; hilo de CX Operation.</div></div>
+<div class="card"><div class="q">¿Infografías o material visual?</div><span class="ans si">Sí</span><div class="j">Elementos de marca (logo, header, footer) para la encuesta de WhatsApp.</div></div>
+<div class="card"><div class="q">¿Reunión de seguimiento?</div><span class="ans no">No</span><div class="j">No se mencionó reunión formal ni fecha; se revisará con cada responsable.</div></div>
+</div></div></div>
+<div class="tb"><h2>Next steps</h2>
+<table><colgroup><col style="width:46%"><col style="width:15%"><col style="width:9%"><col style="width:30%"></colgroup>
+<tr><th>Acción</th><th>Responsable</th><th>Fecha límite</th><th>Dependencias</th></tr>
+<tr><td>Validar con Sam la política de vigencia del IDV (1 hora) en OTP</td><td class="w">Sin definir</td><td class="w">Sin definir</td><td>Respuesta de Sam</td></tr>
+<tr><td>Confirmar con Julio que el filtro de Databricks fue removido</td><td class="w">Sin definir</td><td class="w">Sin definir</td><td>Confirmación de Julio</td></tr>
+<tr><td>Probar el chatbot en producción con el número oficial</td><td class="w">Sin definir</td><td class="w">Sin definir</td><td>Jaime: paso a producción</td></tr>
+<tr><td>Crear conversación para validar de nuevo el historial con OTP</td><td class="w">Sin definir</td><td class="w">Sin definir</td><td>Acceso a una conversación nueva</td></tr>
+<tr><td>Prueba punta a punta del flujo PQRS (correo y actualización)</td><td>Otavio Jordan</td><td class="w">Sin definir</td><td>Estado del despliegue de PQRS</td></tr>
+<tr><td>Verificar pantallazos de momentos 3 y 4 en Smart Supervision</td><td class="w">Sin definir</td><td class="w">Sin definir</td><td>Resultado de la prueba PQRS</td></tr>
+<tr><td>Aprobar el correo con la decisión de la entidad</td><td class="w">Sin definir</td><td class="w">Sin definir</td><td>Aprobación interna pendiente</td></tr>
+<tr><td>Hablar con Jaime: bloqueo de app con botón en Retool</td><td class="w">Sin definir</td><td class="w">Sin definir</td><td>Jaime; desarrollo en Retool</td></tr>
+</table><div class="more">+2 acciones más en la nota original</div></div>
+<footer>Nota original: <a href="https://app.notion.com/p/40feace5de2b81a995dbd7e91b1539ff">https://app.notion.com/p/40feace5de2b81a995dbd7e91b1539ff</a></footer>
+<script type="application/json" id="meta">
+{
+  "titulo": "CF CX Operation",
+  "fecha": "2026-11-05",
+  "hora": "09:30",
+  "area": "CX",
+  "participantes": ["Otavio Jordan", "Luis Felipe Rodríguez Martínez"],
+  "temas": ["auditoria", "chatbot", "pqrs", "retool", "idv"],
+  "objetivo": "Revisar uno a uno los hallazgos pendientes de Auditoría de CF y verificar su estado operativo.",
+  "resultado": "La mayoría de ajustes son de forma y no de fondo, y la operación ya funciona. Siguen pendientes la prueba del chatbot en producción, la prueba punta a punta de PQRS y los pantallazos de Smart Supervision.",
+  "validacion": { "reunion_adicional": true, "slack": true, "infografia": true, "seguimiento": false },
+  "acciones": [
+    { "accion": "Validar con Sam la política de vigencia del IDV (1 hora) en OTP", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Respuesta de Sam" },
+    { "accion": "Confirmar con Julio que el filtro de Databricks fue removido", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Confirmación de Julio" },
+    { "accion": "Probar el chatbot en producción con el número oficial", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Jaime: paso a producción" },
+    { "accion": "Crear conversación para validar de nuevo el historial con OTP", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Acceso a una conversación nueva" },
+    { "accion": "Prueba punta a punta del flujo PQRS (correo y actualización)", "responsable": "Otavio Jordan", "fecha": "Sin definir", "dependencias": "Estado del despliegue de PQRS" },
+    { "accion": "Verificar pantallazos de momentos 3 y 4 en Smart Supervision", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Resultado de la prueba PQRS" },
+    { "accion": "Aprobar el correo con la decisión de la entidad", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Aprobación interna pendiente" },
+    { "accion": "Hablar con Jaime: bloqueo de app con botón en Retool", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Jaime; desarrollo en Retool" },
+    { "accion": "Buscar elementos de marca (logo, header, footer) para la encuesta de WhatsApp y enviar el spreadsheet", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Elementos de marca disponibles" },
+    { "accion": "Hacer más pruebas punta a punta con más escenarios y casos legados", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Resultado de las pruebas anteriores" }
+  ],
+  "notion_url": "https://app.notion.com/p/40feace5de2b81a995dbd7e91b1539ff"
+}
+</script>
+<script id="autofit">
+(function(){
+  var html = document.documentElement, body = document.body;
+  function fit(){
+    if (!body) return;
+    body.style.zoom = ''; body.style.marginLeft = ''; html.style.overflow = '';
+    var w = Math.max(html.scrollWidth, body.scrollWidth);
+    var h = Math.max(html.scrollHeight, body.scrollHeight);
+    if (!w || !h) return;
+    var s = Math.min(window.innerWidth / w, window.innerHeight / h, 1);
+    if (s < 0.3) s = 0.3;
+    var ml = parseFloat(getComputedStyle(body).marginLeft) || 0;
+    body.style.zoom = s;
+    var used = w * s;
+    if (used < window.innerWidth - 1) body.style.marginLeft = (ml + (window.innerWidth - used) / 2 / s) + 'px';
+    html.style.overflow = (h * s <= window.innerHeight + 1 && used <= window.innerWidth + 1) ? 'hidden' : '';
+  }
+  var t; function later(){ clearTimeout(t); t = setTimeout(fit, 60); }
+  window.addEventListener('resize', later);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+})();
+</script>
+</body></html>

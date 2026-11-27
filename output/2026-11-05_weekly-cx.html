@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Weekly - CX</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;width:1280px;height:720px;overflow:hidden;font-family:'Outfit',sans-serif;color:#111;background:#fff;font-size:13px;line-height:1.25;padding:12px 24px 6px}
+h1{margin:0;font-size:26px;color:#1C67DE;font-weight:700;line-height:1.1}
+.sub{color:#868686;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sub b{color:#111;font-weight:600}
+.mid{display:grid;grid-template-columns:610px 1fr;gap:16px;height:330px;margin-top:8px}
+h2{margin:0 0 4px;font-size:14px;color:#1C67DE;font-weight:700;border-bottom:2px solid #8CF5F5;padding-bottom:2px}
+.left{display:flex;flex-direction:column}
+.stack{display:flex;flex-direction:column;gap:6px;flex:1}
+.box{border:1.5px solid #1C67DE;border-radius:8px;padding:5px 10px;flex:auto}
+.box h3{margin:0 0 2px;font-size:13px;color:#1C67DE;font-weight:600}
+ul{margin:0;padding-left:16px}
+p{margin:0}
+.right{display:flex;flex-direction:column}
+.grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px;flex:1}
+.card{border:1.5px solid #1C67DE;border-radius:8px;padding:6px 10px;overflow:hidden}
+.card .q{font-weight:600;margin-bottom:4px}
+.tag{display:inline-block;padding:0 12px;border-radius:10px;font-weight:700;margin-bottom:4px}
+.si{background:#8CF5F5;color:#111}
+.no{background:#fff;border:1.5px solid #868686;color:#868686;padding:0 10px}
+.card .j{color:#111}
+table{width:100%;border-collapse:collapse;table-layout:fixed;margin-top:2px}
+th{background:#1C67DE;color:#fff;text-align:left;font-weight:600;padding:3px 6px}
+td{padding:2px 6px;border-bottom:1px solid #dfe8f8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:22px}
+.w{background:#FF8F43;color:#111;border-radius:8px;padding:0 6px;font-weight:600}
+.more{color:#868686;margin-top:2px}
+.foot{color:#868686;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.foot a{color:#1C67DE}
+</style>
+</head>
+<body>
+<h1>Weekly - CX</h1>
+<div class="sub"><b>5 nov 2026 · 12:00</b> (hora Colombia) · Participantes: Juan Pablo Garcia, Laura Nathalia Sosa Flórez, Ricardo Andres Lopez Esquivel, Otavio Jordan, Hugo Nelson Estupiñán García, Luis Felipe Rodríguez Martínez, Jaime Flautero, Gisela Vives Serrano, Monica Adriana Mariño Gutierrez, Andrea Catalina Martin Rodriguez</div>
+<div class="mid">
+<div class="left"><h2>Resumen de la reunión</h2><div class="stack">
+<div class="box"><h3>Objetivo / tema principal</h3><p>Alinear los pendientes críticos para el lanzamiento de Genesys del jueves: hallazgos de auditoría, pruebas, bloqueo de app y despliegues.</p></div>
+<div class="box"><h3>Principales temas tratados</h3><ul>
+<li>Vigencia del proceso IDV/IDB (propuesta de 30 minutos)</li>
+<li>Pruebas del chatbot sandbox y real</li>
+<li>Bloqueo de app ante fraude y cobertura 24/7</li>
+<li>Hallazgos de auditoría y Smart Supervision</li>
+<li>Despliegues a producción y casos mal direccionados a la Super</li></ul></div>
+<div class="box"><h3>Resultado / resumen</h3><p>Se propone 30 minutos de vigencia del IDV/IDB y abrir Retool a cualquier cliente mientras se resuelve la llave. Quedan abiertos el bloqueo 24/7, las pruebas de botones PQRS y la lista de pendientes.</p></div>
+</div></div>
+<div class="right"><h2>Validación post-reunión</h2><div class="grid">
+<div class="card"><div class="q">¿Se requieren reuniones adicionales?</div><span class="tag si">Sí</span><div class="j">Revisión a las 4 pm con Jaime y reunión de Jaime con Carito Zuluaga por un recurso de despliegues.</div></div>
+<div class="card"><div class="q">¿Hay que enviar resúmenes o mensajes de Slack?</div><span class="tag si">Sí</span><div class="j">Mensaje directo a Monica con pendientes y respuesta a Santiago Macalister sobre casos mal direccionados.</div></div>
+<div class="card"><div class="q">¿Hay que hacer infografías o material visual?</div><span class="tag no">No</span><div class="j">Solo un video de ejecución de PQRS para auditoría, no material visual.</div></div>
+<div class="card"><div class="q">¿Hay que programar una reunión de seguimiento?</div><span class="tag si">Sí</span><div class="j">Revisión conjunta hoy a las 4 pm sobre botones, pruebas y pendientes.</div></div>
+</div></div>
+</div>
+<h2 style="margin-top:6px">Next steps</h2>
+<table>
+<colgroup><col style="width:520px"><col style="width:215px"><col style="width:100px"><col style="width:397px"></colgroup>
+<tr><th>Acción</th><th>Responsable</th><th>Fecha límite</th><th>Dependencias</th></tr>
+<tr><td>Confirmar a auditoría vigencia de 30 min del IDV/IDB y los 6 puntos</td><td>Luis Felipe Rodríguez Martínez</td><td>2026-11-05</td><td>Acuerdo de OTA y Jaime sobre los 30 minutos</td></tr>
+<tr><td>Enviar a Monica el listado de pendientes previos al lanzamiento</td><td>Luis Felipe Rodríguez Martínez</td><td>2026-11-05</td><td>Reunión de las 4 pm con Jaime</td></tr>
+<tr><td>Revisar chatbot de sandbox y probar enrutamiento a Genesys</td><td>Jaime Flautero</td><td>2026-11-05</td><td>Pruebas con Luis Felipe y Juan Pablo</td></tr>
+<tr><td>Confirmar cuándo estarán listos los botones de emisión y actualización PQRS</td><td>Jaime Flautero</td><td>2026-11-05</td><td>Revisión conjunta a las 4 pm</td></tr>
+<tr><td>Probar PQRS, grabar video y verificar 4 momentos en Smart Supervision</td><td>Luis Felipe Rodríguez Martínez</td><td><span class="w">Sin definir</span></td><td>Confirmación de Jaime de que los botones están listos</td></tr>
+<tr><td>Confirmar quién ejecuta el bloqueo de app y cubrir horario nocturno</td><td><span class="w">Sin definir</span></td><td><span class="w">Sin definir</span></td><td>Support engineer y automatización de Monica</td></tr>
+<tr><td>Proponer automatización del bloqueo preventivo de app 24/7</td><td>Monica Adriana Mariño Gutierrez</td><td>2026-11-30</td><td>—</td></tr>
+<tr><td>Escalar con la Superintendencia si no hay credenciales de Smart Supervision</td><td><span class="w">Sin definir</span></td><td>2026-11-06</td><td>Respuesta de la Super sobre credenciales</td></tr>
+</table>
+<div class="more">+3 acciones más en la nota original</div>
+<div class="foot">Nota original: <a href="https://app.notion.com/p/40feace5de2b816b88fcd1fadde345b4">https://app.notion.com/p/40feace5de2b816b88fcd1fadde345b4</a></div>
+<script type="application/json" id="meta">
+{
+  "titulo": "Weekly - CX",
+  "fecha": "2026-11-05",
+  "hora": "12:00",
+  "area": "CX",
+  "participantes": ["Juan Pablo Garcia", "Laura Nathalia Sosa Flórez", "Ricardo Andres Lopez Esquivel", "Otavio Jordan", "Hugo Nelson Estupiñán García", "Luis Felipe Rodríguez Martínez", "Jaime Flautero", "Gisela Vives Serrano", "Monica Adriana Mariño Gutierrez", "Andrea Catalina Martin Rodriguez"],
+  "temas": ["genesys", "weekly", "auditoría", "bloqueo de app", "smart supervision"],
+  "objetivo": "Alinear los pendientes críticos para el lanzamiento de Genesys del jueves: hallazgos de auditoría, pruebas, bloqueo de app y despliegues.",
+  "resultado": "Se propone 30 minutos de vigencia del IDV/IDB y abrir Retool a cualquier cliente mientras se resuelve la llave. Quedan abiertos el bloqueo 24/7, las pruebas de botones PQRS y la lista de pendientes.",
+  "validacion": { "reunion_adicional": true, "slack": true, "infografia": false, "seguimiento": true },
+  "acciones": [
+    { "accion": "Confirmar a auditoría vigencia de 30 min del IDV/IDB y los 6 puntos", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "2026-11-05", "dependencias": "Acuerdo de OTA y Jaime sobre los 30 minutos" },
+    { "accion": "Enviar a Monica el listado de pendientes previos al lanzamiento", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "2026-11-05", "dependencias": "Reunión de las 4 pm con Jaime" },
+    { "accion": "Revisar chatbot de sandbox y probar enrutamiento a Genesys", "responsable": "Jaime Flautero", "fecha": "2026-11-05", "dependencias": "Pruebas con Luis Felipe y Juan Pablo" },
+    { "accion": "Confirmar cuándo estarán listos los botones de emisión y actualización PQRS", "responsable": "Jaime Flautero", "fecha": "2026-11-05", "dependencias": "Revisión conjunta a las 4 pm" },
+    { "accion": "Probar PQRS, grabar video y verificar 4 momentos en Smart Supervision", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "Sin definir", "dependencias": "Confirmación de Jaime de que los botones están listos" },
+    { "accion": "Confirmar quién ejecuta el bloqueo de app y cubrir horario nocturno", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Support engineer y automatización de Monica" },
+    { "accion": "Proponer automatización del bloqueo preventivo de app 24/7", "responsable": "Monica Adriana Mariño Gutierrez", "fecha": "2026-11-30", "dependencias": "" },
+    { "accion": "Escalar con la Superintendencia si no hay credenciales de Smart Supervision", "responsable": "Sin definir", "fecha": "2026-11-06", "dependencias": "Respuesta de la Super sobre credenciales" },
+    { "accion": "Reunirse con Carito Zuluaga para pedir un recurso dedicado a despliegues", "responsable": "Jaime Flautero", "fecha": "2026-11-06", "dependencias": "" },
+    { "accion": "Crear lista de pendientes listos antes del miércoles para asegurar el lanzamiento del jueves", "responsable": "Sin definir", "fecha": "2026-11-11", "dependencias": "Roadmap de hallazgos de auditoría" },
+    { "accion": "Responder a Santiago Macalister sobre habilitar el canal de casos mal direccionados", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Conectividad entre ambientes (IP, DNS)" }
+  ],
+  "notion_url": "https://app.notion.com/p/40feace5de2b816b88fcd1fadde345b4"
+}
+</script>
+<script id="autofit">
+(function(){
+  var html = document.documentElement, body = document.body;
+  function fit(){
+    if (!body) return;
+    body.style.zoom = ''; body.style.marginLeft = ''; html.style.overflow = '';
+    var w = Math.max(html.scrollWidth, body.scrollWidth);
+    var h = Math.max(html.scrollHeight, body.scrollHeight);
+    if (!w || !h) return;
+    var s = Math.min(window.innerWidth / w, window.innerHeight / h, 1);
+    if (s < 0.3) s = 0.3;
+    var ml = parseFloat(getComputedStyle(body).marginLeft) || 0;
+    body.style.zoom = s;
+    var used = w * s;
+    if (used < window.innerWidth - 1) body.style.marginLeft = (ml + (window.innerWidth - used) / 2 / s) + 'px';
+    html.style.overflow = (h * s <= window.innerHeight + 1 && used <= window.innerWidth + 1) ? 'hidden' : '';
+  }
+  var t; function later(){ clearTimeout(t); t = setTimeout(fit, 60); }
+  window.addEventListener('resize', later);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+})();
+</script>
+</body>
+</html>

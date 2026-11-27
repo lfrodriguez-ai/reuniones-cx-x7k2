@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Genesys Migration daily - 2026-11-04</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:720px;overflow:hidden;background:#FFFFFF}
+body{font-family:'Outfit',sans-serif;color:#111111;font-size:13px;line-height:1.3;padding:12px 30px 8px}
+header{border-bottom:3px solid #1C67DE;padding-bottom:5px}
+h1{font-size:26px;color:#1C67DE;font-weight:700;line-height:1.1}
+.sub{color:#868686;margin-top:2px}
+.sub b{color:#111111;font-weight:600}
+.mid{display:flex;gap:16px;margin-top:8px;height:312px}
+.left{width:600px;display:flex;flex-direction:column;gap:6px}
+.box{border:1.5px solid #1C67DE;border-radius:8px;padding:5px 10px;overflow:hidden}
+.box h2,.card h2{font-size:13px;color:#1C67DE;text-transform:uppercase;letter-spacing:.4px;margin-bottom:1px;font-weight:700}
+.box ul{padding-left:16px}
+.right{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:6px}
+.card{border:1.5px solid #1C67DE;border-radius:8px;padding:5px 10px;overflow:hidden}
+.card h2{text-transform:none;letter-spacing:0}
+.ans{display:inline-block;font-weight:700;padding:0 10px;border-radius:10px;margin:2px 0}
+.si{background:#8CF5F5;color:#111111}
+.no{background:#EEEEEE;color:#868686}
+.card p{color:#111111}
+table{width:100%;border-collapse:collapse;table-layout:fixed;margin-top:8px}
+th{background:#1C67DE;color:#FFFFFF;text-align:left;font-weight:600;padding:3px 8px}
+td{padding:2px 8px;border-bottom:1px solid #D9E4F7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+td.al{color:#FF8F43;font-weight:600}
+.more{color:#868686;margin-top:2px}
+footer{margin-top:3px;color:#868686;display:flex;justify-content:space-between}
+footer a{color:#1C67DE;text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+<h1>Genesys Migration daily</h1>
+<div class="sub"><b>2026-11-04 · 07:59 (hora Colombia)</b> · Participantes: Cristian Avila, Juan Sebastian Ramirez Hernandez, Ricardo Andres Lopez Esquivel, Otavio Jordan, Luis Felipe Rodríguez Martínez, Jaime Flautero, Claudia Tabares, Laura Nathalia Sosa Flórez, Yurley Paez Castro, Andrea Catalina Martin Rodriguez, Diana Milena Fuentes Lopez, Daniel Francisco Verano Tenza y 7 más (lista completa en metadatos)</div>
+</header>
+<div class="mid">
+<div class="left">
+<div class="box"><h2>Objetivo / tema principal</h2><p>Daily de la migración a Genesys: estado de la automatización de escalamiento de Marketplace, reportería de Workforce y actualización de datos en la app.</p></div>
+<div class="box"><h2>Principales temas tratados</h2><ul>
+<li>Automatización de Marketplace al 100% y réplica al escalamiento de la línea</li>
+<li>Riesgo de más correos a aliados (hasta cuatro por compra)</li>
+<li>Panel de priorización: solo cubre casos con case management</li>
+<li>Workforce y datos: Databricks como fuente frente a APIs de Genesys</li>
+<li>Actualización de datos en la app: bloqueos y rollout</li>
+</ul></div>
+<div class="box"><h2>Resultado / resumen</h2><p>Marketplace opera al 100% y para escalar a toda la línea solo faltan las reglas de negocio. Se planteó usar Databricks como fuente de la verdad y trazar las tareas de Workforce en el WDA. Los cambios de actualización de datos saldrían en el release del martes 10.</p></div>
+</div>
+<div class="right">
+<div class="card"><h2>¿Reuniones adicionales?</h2><span class="ans si">Sí</span><p>WDA de hoy para trazar las tareas de Workforce y estructura de seguimiento de Genesys.</p></div>
+<div class="card"><h2>¿Resúmenes o mensajes de Slack?</h2><span class="ans si">Sí</span><p>Avisar al equipo comercial del aumento de correos a aliados (comunicación preventiva) y al canal para pruebas con empleados.</p></div>
+<div class="card"><h2>¿Infografías o material visual?</h2><span class="ans no">No</span><p>No se pidió material visual nuevo; solo compartir el video existente de la función.</p></div>
+<div class="card"><h2>¿Reunión de seguimiento?</h2><span class="ans no">No</span><p>El daily ya es el espacio de seguimiento; no se pidió una reunión nueva ni se dio fecha.</p></div>
+</div>
+</div>
+<table>
+<colgroup><col style="width:500px"><col style="width:210px"><col style="width:100px"><col style="width:410px"></colgroup>
+<thead><tr><th>Acción</th><th>Responsable</th><th>Fecha límite</th><th>Dependencias</th></tr></thead>
+<tbody>
+<tr><td>Enviar reglas de escalamiento a toda la línea (día 7 push, día 14 ultimátum)</td><td class="al">Sin definir</td><td>2026-11-04</td><td>Notion con la lógica ya compartido</td></tr>
+<tr><td>Montar la automatización de escalamiento en toda la línea</td><td>Cristian Avila</td><td>2026-11-04</td><td>Recibir las reglas de negocio</td></tr>
+<tr><td>Definir cómo será el push de seguimiento (cantidad e intensidad)</td><td class="al">Sin definir</td><td class="al">Sin definir</td><td>Reglas de negocio de escalamiento</td></tr>
+<tr><td>Avisar a comercial del aumento de correos a aliados</td><td class="al">Sin definir</td><td class="al">Sin definir</td><td>Definición del push de seguimiento</td></tr>
+<tr><td>Revisar seguimiento de Genesys por Workforce y trazar tareas en WDA</td><td class="al">Sin definir</td><td>2026-11-04</td><td>Reunión del WDA</td></tr>
+<tr><td>Quitar dependencia de Genesys y enviar un solo correo</td><td class="al">Sin definir</td><td>2026-11-10</td><td>Release semanal de ingeniería</td></tr>
+<tr><td>Actualizar el rollout plan y el update (equipo volvió a probar)</td><td>Andrea Catalina Martin Rodriguez</td><td class="al">Sin definir</td><td>Cambios incluidos en el release del 10</td></tr>
+<tr><td>Avisar en el canal para probar flujos completos con empleados</td><td>Andrea Catalina Martin Rodriguez</td><td class="al">Sin definir</td><td>Rollout a empleados</td></tr>
+</tbody>
+</table>
+<div class="more">+4 acciones más en la nota original</div>
+<footer><span>Nota original: <a href="https://app.notion.com/p/40eeace5de2b8136a627e8f2274c8c25">https://app.notion.com/p/40eeace5de2b8136a627e8f2274c8c25</a></span><span>Addi CX · Validador diario</span></footer>
+<script type="application/json" id="meta">
+{
+  "titulo": "Genesys Migration daily",
+  "fecha": "2026-11-04",
+  "hora": "07:59",
+  "area": "CX",
+  "participantes": ["Cristian Avila", "Juan Sebastian Ramirez Hernandez", "Ricardo Andres Lopez Esquivel", "Otavio Jordan", "Luis Felipe Rodríguez Martínez", "Jaime Flautero", "Claudia Tabares", "Laura Nathalia Sosa Flórez", "Yurley Paez Castro", "Andrea Catalina Martin Rodriguez", "Diana Milena Fuentes Lopez", "Daniel Francisco Verano Tenza", "Hugo Nelson Estupiñán García", "Juan Diego Aguilar Tren", "Jenny Marcela Ospina Gonzalez", "Luis Eduardo Penagos Bermudez", "Monica Arias", "Miguel Angel Santana", "Yenni Carolina Pallares Sánchez"],
+  "temas": ["genesys", "case management", "marketplace", "workforce", "actualización de datos"],
+  "objetivo": "Daily de la migración a Genesys: estado de la automatización de escalamiento de Marketplace, reportería de Workforce y actualización de datos en la app.",
+  "resultado": "Marketplace opera al 100% y para escalar a toda la línea solo faltan las reglas de negocio. Se planteó usar Databricks como fuente de la verdad y trazar las tareas de Workforce en el WDA. Los cambios de actualización de datos saldrían en el release del martes 10.",
+  "validacion": { "reunion_adicional": true, "slack": true, "infografia": false, "seguimiento": false },
+  "acciones": [
+    { "accion": "Enviar reglas de escalamiento a toda la línea (día 7 push, día 14 ultimátum)", "responsable": "Sin definir", "fecha": "2026-11-04", "dependencias": "Notion con la lógica ya compartido" },
+    { "accion": "Montar la automatización de escalamiento en toda la línea", "responsable": "Cristian Avila", "fecha": "2026-11-04", "dependencias": "Recibir las reglas de negocio" },
+    { "accion": "Definir cómo será el push de seguimiento (cantidad e intensidad)", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Reglas de negocio de escalamiento" },
+    { "accion": "Avisar a comercial del aumento de correos a aliados", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Definición del push de seguimiento" },
+    { "accion": "Revisar seguimiento de Genesys por Workforce y trazar tareas en WDA", "responsable": "Sin definir", "fecha": "2026-11-04", "dependencias": "Reunión del WDA" },
+    { "accion": "Quitar dependencia de Genesys y enviar un solo correo", "responsable": "Sin definir", "fecha": "2026-11-10", "dependencias": "Release semanal de ingeniería" },
+    { "accion": "Actualizar el rollout plan y el update (equipo volvió a probar)", "responsable": "Andrea Catalina Martin Rodriguez", "fecha": "Sin definir", "dependencias": "Cambios incluidos en el release del 10" },
+    { "accion": "Avisar en el canal para probar flujos completos con empleados", "responsable": "Andrea Catalina Martin Rodriguez", "fecha": "Sin definir", "dependencias": "Rollout a empleados" },
+    { "accion": "Definir el copy o speech de invitación a la nueva función, cargarlo a Alfred y alinear un splash screen con marketing", "responsable": "Luis Eduardo Penagos Bermudez", "fecha": "Sin definir", "dependencias": "Equipo de marketing" },
+    { "accion": "Reabrir con legal la conversación sobre actualización de datos para prospectos", "responsable": "Andrea Catalina Martin Rodriguez", "fecha": "Sin definir", "dependencias": "Postura previa de legal en contra" },
+    { "accion": "Compartir el video de la función en los comentarios", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Ninguna mencionada" },
+    { "accion": "Coordinar con Ramiro el enrutamiento de clientes a la app para actualizar datos", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Rollout al 100%" }
+  ],
+  "notion_url": "https://app.notion.com/p/40eeace5de2b8136a627e8f2274c8c25"
+}
+</script>
+<script id="autofit">
+(function(){
+  var html = document.documentElement, body = document.body;
+  function fit(){
+    if (!body) return;
+    body.style.zoom = ''; body.style.marginLeft = ''; html.style.overflow = '';
+    var w = Math.max(html.scrollWidth, body.scrollWidth);
+    var h = Math.max(html.scrollHeight, body.scrollHeight);
+    if (!w || !h) return;
+    var s = Math.min(window.innerWidth / w, window.innerHeight / h, 1);
+    if (s < 0.3) s = 0.3;
+    var ml = parseFloat(getComputedStyle(body).marginLeft) || 0;
+    body.style.zoom = s;
+    var used = w * s;
+    if (used < window.innerWidth - 1) body.style.marginLeft = (ml + (window.innerWidth - used) / 2 / s) + 'px';
+    html.style.overflow = (h * s <= window.innerHeight + 1 && used <= window.innerWidth + 1) ? 'hidden' : '';
+  }
+  var t; function later(){ clearTimeout(t); t = setTimeout(fit, 60); }
+  window.addEventListener('resize', later);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+})();
+</script>
+</body>
+</html>

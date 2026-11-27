@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ops + Fraud Ops checklist</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1280px;height:720px;overflow:hidden;background:#fff;color:#111;font-family:'Outfit',sans-serif;font-size:13px;line-height:1.25}
+.wrap{padding:12px 24px 8px}
+h1{color:#1C67DE;font-size:26px;font-weight:700;line-height:1.1}
+.sub{color:#868686;font-size:13px;margin-top:2px}
+.part{font-size:13px;margin-top:2px;max-height:34px;overflow:hidden}
+.part b{color:#1C67DE}
+.mid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;height:296px}
+.left{display:flex;flex-direction:column;gap:6px}
+.box{border:1.5px solid #1C67DE;border-radius:8px;padding:5px 10px;flex:1}
+.box h3{color:#1C67DE;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:2px}
+.box ul{padding-left:16px}
+.right{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px}
+.card{border:1.5px solid #1C67DE;border-radius:8px;padding:6px 10px}
+.card h4{font-size:13px;font-weight:600;color:#111;margin-bottom:4px}
+.tag{display:inline-block;padding:1px 12px;border-radius:12px;font-weight:700;font-size:13px;margin-bottom:3px}
+.si{background:#8CF5F5;color:#111}
+.no{background:#eee;color:#868686}
+.card p{font-size:13px}
+.sec{color:#1C67DE;font-weight:700;font-size:13px;text-transform:uppercase;margin:6px 0 3px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#1C67DE;color:#fff;text-align:left;padding:3px 8px;font-weight:600}
+td{padding:2px 8px;border-bottom:1px solid #dde6f7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:420px}
+td.a{max-width:440px}
+.warn{color:#FF8F43;font-weight:600}
+.foot{color:#868686;font-size:13px;margin-top:4px;display:flex;justify-content:space-between}
+.foot a{color:#1C67DE;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Ops + Fraud Ops checklist</h1>
+<div class="sub">6 de noviembre de 2026 · 13:00 (hora Colombia)</div>
+<div class="part"><b>Participantes:</b> Monica Adriana Mariño Gutierrez, Luis Felipe Rodríguez Martínez, Asdrubal Jose Gamboa Farina, María Paula Bautista Yépez, Yurley Paez Castro</div>
+<div class="mid">
+<div class="left">
+<div class="box"><h3>Objetivo / tema principal</h3><p>Revisar el Deposits Launch Checklist con CX y Fraude para confirmar que nada impida operar en el lanzamiento de Friends and Family del 12 de noviembre.</p></div>
+<div class="box"><h3>Principales temas tratados</h3><ul>
+<li>Prueba funcional de Genesis en producción (chatbot, enrutamiento, case management)</li>
+<li>Credenciales de Smart Supervision, Identity y OTP en producción</li>
+<li>Genesis de IDB vs. banco: ¿misma instancia?</li>
+<li>Riesgos: candado de consulta en Retool y cuentas mula</li>
+<li>Plan de Friends and Family y comunicación al regulador</li>
+</ul></div>
+<div class="box"><h3>Resultado / resumen</h3><p>Lanzamiento confirmado para el 12 de noviembre. La prueba de Production Deployment será compartida entre CX y Fraude. El candado de Retool no bloquea el lanzamiento. Quedan abiertas la instancia de Genesis y la alerta de cuentas mula.</p></div>
+</div>
+<div class="right">
+<div class="card"><h4>¿Reuniones adicionales?</h4><span class="tag si">Sí</span><p>Sesión con la Defensoría el lunes 9 am (Luis Felipe) y prueba conjunta CX y Fraude el martes o miércoles.</p></div>
+<div class="card"><h4>¿Resúmenes o mensajes de Slack?</h4><span class="tag si">Sí</span><p>Equipo CX y Fraude: confirmar a Jaimoto si el Genesis del banco es instancia aparte; canal sugerido: el del checklist.</p></div>
+<div class="card"><h4>¿Infografías o material visual?</h4><span class="tag no">No</span><p>No se mencionó material visual.</p></div>
+<div class="card"><h4>¿Reunión de seguimiento?</h4><span class="tag no">No</span><p>No se acordó una reunión de seguimiento; se actualiza el checklist durante el día.</p></div>
+</div>
+</div>
+<div class="sec">Next steps</div>
+<table>
+<tr><th style="width:44%">Acción</th><th style="width:17%">Responsable</th><th style="width:11%">Fecha límite</th><th>Dependencias</th></tr>
+<tr><td class="a">Prueba funcional conjunta de Genesis en producción (WhatsApp, enrutamiento, case management)</td><td>Luis Felipe Rodríguez Martínez, Asdrubal Jose Gamboa Farina, Yurley Paez Castro</td><td>2026-11-12</td><td>WhatsApp en producción (Jaimoto)</td></tr>
+<tr><td class="a">Actualizar el checklist y las tareas de Jaimoto; crear tarea para Luis Felipe</td><td>Monica Adriana Mariño Gutierrez</td><td class="warn">Sin definir</td><td>Aportes de CX y Fraude</td></tr>
+<tr><td class="a">Obtener credenciales de Smart Supervision en producción y validar Identity</td><td>Jaimoto</td><td>2026-11-12</td><td>Entrega de credenciales pedidas</td></tr>
+<tr><td class="a">Reunión con la Defensoría para recibir el entorno de producción del CISDEF</td><td>Luis Felipe Rodríguez Martínez</td><td>2026-11-09</td><td>Disponibilidad de la Defensoría</td></tr>
+<tr><td class="a">Confirmar a Jaimoto si el Genesis del banco es instancia independiente</td><td>Asdrubal Jose Gamboa Farina, Yurley Paez Castro, Luis Felipe Rodríguez Martínez</td><td class="warn">Sin definir</td><td>Respuesta de Jaimoto</td></tr>
+<tr><td class="a">Revisar el flujo de cuentas mula y enviar nuevos puntos a Monica</td><td class="warn">Sin definir</td><td class="warn">Sin definir</td><td>Flujo integrado y prueba con Fraude</td></tr>
+</table>
+<div class="foot"><span>&nbsp;</span><a href="https://app.notion.com/p/410eace5de2b81c485eac3281025e409">Nota original en Notion</a></div>
+</div>
+<script type="application/json" id="meta">
+{
+  "titulo": "Ops + Fraud Ops checklist",
+  "fecha": "2026-11-06",
+  "hora": "13:00",
+  "area": "CX",
+  "participantes": ["Monica Adriana Mariño Gutierrez", "Luis Felipe Rodríguez Martínez", "Asdrubal Jose Gamboa Farina", "María Paula Bautista Yépez", "Yurley Paez Castro"],
+  "temas": ["genesys", "friends and family", "checklist lanzamiento", "fraude", "smart supervision"],
+  "objetivo": "Revisar el Deposits Launch Checklist con CX y Fraude para confirmar que nada impida operar en el lanzamiento de Friends and Family del 12 de noviembre.",
+  "resultado": "Lanzamiento confirmado para el 12 de noviembre. La prueba de Production Deployment será compartida entre CX y Fraude. El candado de Retool no bloquea el lanzamiento. Quedan abiertas la instancia de Genesis y la alerta de cuentas mula.",
+  "validacion": { "reunion_adicional": true, "slack": true, "infografia": false, "seguimiento": false },
+  "acciones": [
+    { "accion": "Prueba funcional conjunta de Genesis en producción (WhatsApp, enrutamiento, case management)", "responsable": "Luis Felipe Rodríguez Martínez, Asdrubal Jose Gamboa Farina, Yurley Paez Castro", "fecha": "2026-11-12", "dependencias": "WhatsApp en producción (Jaimoto)" },
+    { "accion": "Actualizar el checklist y las tareas de Jaimoto; crear tarea para Luis Felipe", "responsable": "Monica Adriana Mariño Gutierrez", "fecha": "Sin definir", "dependencias": "Aportes de CX y Fraude" },
+    { "accion": "Obtener credenciales de Smart Supervision en producción y validar Identity", "responsable": "Jaimoto", "fecha": "2026-11-12", "dependencias": "Entrega de credenciales pedidas" },
+    { "accion": "Reunión con la Defensoría para recibir el entorno de producción del CISDEF", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "2026-11-09", "dependencias": "Disponibilidad de la Defensoría" },
+    { "accion": "Confirmar a Jaimoto si el Genesis del banco es instancia independiente", "responsable": "Asdrubal Jose Gamboa Farina, Yurley Paez Castro, Luis Felipe Rodríguez Martínez", "fecha": "Sin definir", "dependencias": "Respuesta de Jaimoto" },
+    { "accion": "Revisar el flujo de cuentas mula y enviar nuevos puntos a Monica", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Flujo integrado y prueba con Fraude" }
+  ],
+  "notion_url": "https://app.notion.com/p/410eace5de2b81c485eac3281025e409"
+}
+</script>
+<script id="autofit">
+(function(){
+  var html = document.documentElement, body = document.body;
+  function fit(){
+    if (!body) return;
+    body.style.zoom = ''; body.style.marginLeft = ''; html.style.overflow = '';
+    var w = Math.max(html.scrollWidth, body.scrollWidth);
+    var h = Math.max(html.scrollHeight, body.scrollHeight);
+    if (!w || !h) return;
+    var s = Math.min(window.innerWidth / w, window.innerHeight / h, 1);
+    if (s < 0.3) s = 0.3;
+    var ml = parseFloat(getComputedStyle(body).marginLeft) || 0;
+    body.style.zoom = s;
+    var used = w * s;
+    if (used < window.innerWidth - 1) body.style.marginLeft = (ml + (window.innerWidth - used) / 2 / s) + 'px';
+    html.style.overflow = (h * s <= window.innerHeight + 1 && used <= window.innerWidth + 1) ? 'hidden' : '';
+  }
+  var t; function later(){ clearTimeout(t); t = setTimeout(fit, 60); }
+  window.addEventListener('resize', later);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+})();
+</script>
+</body>
+</html>

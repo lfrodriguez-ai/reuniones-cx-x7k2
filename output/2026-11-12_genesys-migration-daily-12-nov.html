@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Genesys Migration daily 12-nov</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1280px;height:720px;overflow:hidden;background:#fff;color:#111;font-family:'Outfit',sans-serif;font-size:13px;line-height:1.25}
+.wrap{padding:12px 24px 8px}
+h1{color:#1C67DE;font-size:26px;font-weight:700;line-height:1.1}
+.sub{color:#868686;font-size:13px;margin-top:2px}
+.part{font-size:13px;margin-top:2px;max-height:34px;overflow:hidden}
+.part b{color:#1C67DE}
+.mid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;height:296px}
+.left{display:flex;flex-direction:column;gap:6px}
+.box{border:1.5px solid #1C67DE;border-radius:8px;padding:5px 10px;flex:1}
+.box h3{color:#1C67DE;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:2px}
+.box ul{padding-left:16px}
+.right{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px}
+.card{border:1.5px solid #1C67DE;border-radius:8px;padding:6px 10px}
+.card h4{font-size:13px;font-weight:600;color:#111;margin-bottom:4px}
+.tag{display:inline-block;padding:1px 12px;border-radius:12px;font-weight:700;font-size:13px;margin-bottom:3px}
+.si{background:#8CF5F5;color:#111}
+.no{background:#eee;color:#868686}
+.card p{font-size:13px}
+.sec{color:#1C67DE;font-weight:700;font-size:13px;text-transform:uppercase;margin:6px 0 3px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#1C67DE;color:#fff;text-align:left;padding:3px 8px;font-weight:600}
+td{padding:2px 8px;border-bottom:1px solid #dde6f7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:420px}
+td.a{max-width:440px}
+.warn{color:#FF8F43;font-weight:600}
+.foot{color:#868686;font-size:13px;margin-top:4px;display:flex;justify-content:space-between}
+.foot a{color:#1C67DE;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Genesys Migration daily 12-nov</h1>
+<div class="sub">12 de noviembre de 2026 · 08:00 (hora Colombia)</div>
+<div class="part"><b>Participantes:</b> Cristian Avila, Juan Sebastian Ramirez Hernandez, Ricardo Andres Lopez Esquivel, Otavio Jordan, Luis Felipe Rodríguez Martínez, Jaime Flautero, Claudia Tabares, Laura Nathalia Sosa Flórez, Yurley Paez Castro, Jessy Alvira</div>
+<div class="mid">
+<div class="left">
+<div class="box"><h3>Objetivo / tema principal</h3><p>Dar seguimiento diario a la migración a Genesys: API para automatizaciones, acceso a datos, mensajes no entregados, casos perdidos en colas y bot en producción.</p></div>
+<div class="box"><h3>Principales temas tratados</h3><ul>
+<li>Envío por API con agente para automatizaciones y API Key por equipo</li>
+<li>Dashboards: flexibilidad con IA vs fuente única de verdad</li>
+<li>Mensajes no entregados e inactividad (shortcuts)</li>
+<li>Casos perdidos en colas: cerca de 2.000 dormidos y límite de 500</li>
+<li>Bot en producción: solo chat y acceso manual de tres personas</li>
+</ul></div>
+<div class="box"><h3>Resultado / resumen</h3><p>Se decidió usar el envío por API con agente y agregar dos shortcuts de inactividad. Otavio Jordan asume el monitoreo de colas. No hubo conclusión sobre dashboards por líder: se llevará a Gisela y Majo.</p></div>
+</div>
+<div class="right">
+<div class="card"><h4>¿Reuniones adicionales?</h4><span class="tag si">Sí</span><p>Con Gisela y Majo (hoy 10:30) sobre casos perdidos; con data ops (hoy 9:00); y 30 a 40 min para enrutar y priorizar.</p></div>
+<div class="card"><h4>¿Resúmenes o mensajes de Slack?</h4><span class="tag si">Sí</span><p>Comunicación en el canal para que los agentes cambien el estado desde la app de casos, no desde Genesys.</p></div>
+<div class="card"><h4>¿Infografías o material visual?</h4><span class="tag si">Sí</span><p>Dashboard de acompañamiento de operación y queries para monitorear colas.</p></div>
+<div class="card"><h4>¿Reunión de seguimiento?</h4><span class="tag si">Sí</span><p>Se buscará espacio antes de crear el daily periódico (sin fecha exacta).</p></div>
+</div>
+</div>
+<div class="sec">Next steps</div>
+<table>
+<tr><th style="width:44%">Acción</th><th style="width:15%">Responsable</th><th style="width:12%">Fecha límite</th><th>Dependencias</th></tr>
+<tr><td class="a">Compartir cómo enmascarar la clave y crear una API Key por equipo</td><td>Cristian Avila</td><td class="warn">Sin definir</td><td>Apoyo de Jaime y equipo de data ops</td></tr>
+<tr><td class="a">Compartir con otros equipos la query armada para Miguel y Dani</td><td>Otavio Jordan</td><td class="warn">Sin definir</td><td>Ninguna</td></tr>
+<tr><td class="a">Reunión con Gisela y Majo: casos perdidos y reporte de control</td><td class="warn">Sin definir</td><td>2026-11-12</td><td>Asistencia de Gisela y Majo</td></tr>
+<tr><td class="a">Buscar espacio de 30 a 40 min para enrutar, priorizar y revisar PQRS</td><td>Luis Felipe Rodríguez Martínez</td><td class="warn">Sin definir</td><td>Antes de crear el daily periódico</td></tr>
+<tr><td class="a">Investigar causa raíz de mensajes que no salían o no llegaban a clientes</td><td class="warn">Sin definir</td><td class="warn">Sin definir</td><td>Ayuda de ingenieros de Genesys</td></tr>
+<tr><td class="a">Publicar comunicación: cambiar el estado desde la app de casos</td><td>Otavio Jordan</td><td class="warn">Sin definir</td><td>Ninguna</td></tr>
+<tr><td class="a">Reunión con data ops para cerrar credenciales de Genesys</td><td class="warn">Sin definir</td><td>2026-11-12</td><td>Data ops</td></tr>
+</table>
+<div class="foot"><span></span><a href="https://app.notion.com/p/416eace5de2b81e3a30cdab5afe113de">Nota original en Notion</a></div>
+</div>
+<script type="application/json" id="meta">
+{
+  "titulo": "Genesys Migration daily 12-nov",
+  "fecha": "2026-11-12",
+  "hora": "08:00",
+  "area": "CX",
+  "participantes": ["Cristian Avila", "Juan Sebastian Ramirez Hernandez", "Ricardo Andres Lopez Esquivel", "Otavio Jordan", "Luis Felipe Rodríguez Martínez", "Jaime Flautero", "Claudia Tabares", "Laura Nathalia Sosa Flórez", "Yurley Paez Castro", "Jessy Alvira"],
+  "temas": ["genesys", "migración", "api", "colas", "dashboard"],
+  "objetivo": "Dar seguimiento diario a la migración a Genesys: API para automatizaciones, acceso a datos, mensajes no entregados, casos perdidos en colas y bot en producción.",
+  "resultado": "Se decidió usar el envío por API con agente y agregar dos shortcuts de inactividad. Otavio Jordan asume el monitoreo de colas. No hubo conclusión sobre dashboards por líder: se llevará a Gisela y Majo.",
+  "validacion": { "reunion_adicional": true, "slack": true, "infografia": true, "seguimiento": true },
+  "acciones": [
+    { "accion": "Compartir cómo enmascarar la clave y crear una API Key por equipo", "responsable": "Cristian Avila", "fecha": "Sin definir", "dependencias": "Apoyo de Jaime y equipo de data ops" },
+    { "accion": "Compartir con otros equipos la query armada para Miguel y Dani", "responsable": "Otavio Jordan", "fecha": "Sin definir", "dependencias": "" },
+    { "accion": "Reunión con Gisela y Majo: casos perdidos y reporte de control", "responsable": "Sin definir", "fecha": "2026-11-12", "dependencias": "Asistencia de Gisela y Majo" },
+    { "accion": "Buscar espacio de 30 a 40 min para enrutar, priorizar y revisar PQRS", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "Sin definir", "dependencias": "Antes de crear el daily periódico" },
+    { "accion": "Investigar causa raíz de mensajes que no salían o no llegaban a clientes", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Ayuda de ingenieros de Genesys" },
+    { "accion": "Publicar comunicación: cambiar el estado desde la app de casos", "responsable": "Otavio Jordan", "fecha": "Sin definir", "dependencias": "" },
+    { "accion": "Reunión con data ops para cerrar credenciales de Genesys", "responsable": "Sin definir", "fecha": "2026-11-12", "dependencias": "Data ops" }
+  ],
+  "notion_url": "https://app.notion.com/p/416eace5de2b81e3a30cdab5afe113de"
+}
+</script>
+<script id="autofit">
+(function(){
+  var html = document.documentElement, body = document.body;
+  function fit(){
+    if (!body) return;
+    body.style.zoom = ''; body.style.marginLeft = ''; html.style.overflow = '';
+    var w = Math.max(html.scrollWidth, body.scrollWidth);
+    var h = Math.max(html.scrollHeight, body.scrollHeight);
+    if (!w || !h) return;
+    var s = Math.min(window.innerWidth / w, window.innerHeight / h, 1);
+    if (s < 0.3) s = 0.3;
+    var ml = parseFloat(getComputedStyle(body).marginLeft) || 0;
+    body.style.zoom = s;
+    var used = w * s;
+    if (used < window.innerWidth - 1) body.style.marginLeft = (ml + (window.innerWidth - used) / 2 / s) + 'px';
+    html.style.overflow = (h * s <= window.innerHeight + 1 && used <= window.innerWidth + 1) ? 'hidden' : '';
+  }
+  var t; function later(){ clearTimeout(t); t = setTimeout(fit, 60); }
+  window.addEventListener('resize', later);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+})();
+</script>
+</body>
+</html>
