@@ -1,4 +1,4 @@
-window.SLIDES_UPDATED="2026-11-27 12:19";
+window.SLIDES_UPDATED="2026-11-27 12:40";
 window.SLIDES=[{"archivo":"2026-11-03_mp-casos-enrutamiento-genesys.html","meta":{
   "titulo": "MP Casos enrutamiento Genesys",
   "fecha": "2026-11-03",
@@ -1273,6 +1273,24 @@ window.SLIDES=[{"archivo":"2026-11-03_mp-casos-enrutamiento-genesys.html","meta"
   { "accion": "Crear una sesión regular de seguimiento de tickets con Genesys", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "" }
  ],
  "notion_url": "https://app.notion.com/p/425eace5de2b81868d37dc3c3217a2f9"
+}},
+{"archivo":"2026-11-27_lcn-idiomas.html","meta":{
+  "titulo": "LCN idiomas",
+  "fecha": "2026-11-27",
+  "hora": "11:30",
+  "area": "CX",
+  "participantes": ["Luis Felipe Rodríguez Martínez", "Ricardo Andres Lopez Esquivel"],
+  "temas": ["lcn idiomas", "pqr", "reembolsos", "escalamiento"],
+  "objetivo": "Alinear al equipo de PQR sobre cómo atender los reclamos de clientes de LCN Idiomas, prestador de cursos de inglés que quebró, y definir a quién escalar.",
+  "resultado": "Todo caso LCN pasa por Mónica, quien tiene la base. Dentro de la base se libera el pago; fuera se pide información del curso. Se respeta lo ya prometido al cliente. Falta saber cuándo se liberan los pagos.",
+  "validacion": { "reunion_adicional": true, "slack": true, "infografia": false, "seguimiento": false },
+  "acciones": [
+    { "accion": "Contextualizar a Mónica sobre el tema del equipo de PQR", "responsable": "Luis Felipe Rodríguez Martínez", "fecha": "Sin definir", "dependencias": "Disponibilidad de Mónica" },
+    { "accion": "Crear un canal con Mónica para que envíe la base de casos", "responsable": "Ricardo Andres Lopez Esquivel", "fecha": "2026-11-27", "dependencias": "Que Mónica comparta la base" },
+    { "accion": "No actuar en casos LCN hasta reunirse con Mónica; escalar solo a ella", "responsable": "Equipo de PQR", "fecha": "Sin definir", "dependencias": "Reunión con Mónica" },
+    { "accion": "Consultar cuándo se liberan los pagos (se entiende inmediato)", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Michael Cobos" }
+  ],
+  "notion_url": "https://app.notion.com/p/425eace5de2b816cbda0fe5f18e16a37"
 }},
 {"archivo":"2026-11-27_revision-de-transferencia-de-chats-collections-cx.html","meta":{
  "titulo": "Revisión de Transferencia de Chats Collections -> CX",
