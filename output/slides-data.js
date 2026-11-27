@@ -1,4 +1,4 @@
-window.SLIDES_UPDATED="2026-11-27 15:59";
+window.SLIDES_UPDATED="2026-11-27 16:19";
 window.SLIDES=[{"archivo":"2026-11-03_mp-casos-enrutamiento-genesys.html","meta":{
   "titulo": "MP Casos enrutamiento Genesys",
   "fecha": "2026-11-03",
@@ -1291,6 +1291,25 @@ window.SLIDES=[{"archivo":"2026-11-03_mp-casos-enrutamiento-genesys.html","meta"
     { "accion": "Consultar cuándo se liberan los pagos (se entiende inmediato)", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Michael Cobos" }
   ],
   "notion_url": "https://app.notion.com/p/425eace5de2b816cbda0fe5f18e16a37"
+}},
+{"archivo":"2026-11-27_luis-felipe-cristian-camilo.html","meta":{
+  "titulo": "Luis Felipe / Cristian Camilo",
+  "fecha": "2026-11-27",
+  "hora": "15:00",
+  "area": "CX",
+  "participantes": ["Luis Felipe Rodríguez Martínez", "Cristian Avila"],
+  "temas": ["seguimiento reuniones", "claude", "casos escalados", "alfred gues", "piloto"],
+  "objetivo": "Revisar la herramienta de seguimiento de reuniones, dar feedback para llevarla a Claude y definir la regla de 7 días para casos escalados.",
+  "resultado": "Se decidió aplicar la regla de 7 días y correr un piloto de 8 días. Se evaluará pasar la herramienta a Claude y se construirá hoy el nuevo Alfred Gues.",
+  "validacion": { "reunion_adicional": true, "slack": false, "infografia": true, "seguimiento": false },
+  "acciones": [
+    { "accion": "Construir nuevo Alfred Gues con tópicos y correcciones", "responsable": "Sin definir", "fecha": "2026-11-27", "dependencias": "Equipo de Ramiro; sesión con Lucho movida 30 min" },
+    { "accion": "Aplicar regla de 7 días (salvo fraude y PQR) y piloto de 8 días", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Equipo de Ramiro define periodos de disparo" },
+    { "accion": "Dejar documento con la decisión; hablar con Rick sobre excepción PQR", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Decisión de regla de 7 días" },
+    { "accion": "Evaluar llevar la herramienta al chat de Claude con skills y agentes", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Feedback de Cristian Avila" },
+    { "accion": "Grabar los dos videos pendientes de la herramienta", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "" }
+  ],
+  "notion_url": "https://app.notion.com/p/425eace5de2b814fba9dda1708332ed3"
 }},
 {"archivo":"2026-11-27_revision-de-transferencia-de-chats-collections-cx.html","meta":{
  "titulo": "Revisión de Transferencia de Chats Collections -> CX",
