@@ -1,4 +1,4 @@
-window.SLIDES_UPDATED="2026-11-27 16:19";
+window.SLIDES_UPDATED="2026-11-27 16:40";
 window.SLIDES=[{"archivo":"2026-11-03_mp-casos-enrutamiento-genesys.html","meta":{
   "titulo": "MP Casos enrutamiento Genesys",
   "fecha": "2026-11-03",
@@ -1349,4 +1349,26 @@ window.SLIDES=[{"archivo":"2026-11-03_mp-casos-enrutamiento-genesys.html","meta"
   { "accion": "Reunirse con Lucito para entregar datos a Rami, el Abu y Gise", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Datos consolidados; Laura y Rami buscan solución" }
  ],
  "notion_url": "https://app.notion.com/p/425eace5de2b81fd956ee965cce5b2c9"
+}},
+{"archivo":"2026-11-27_sas-consumer-kordev-asana.html","meta":{
+  "titulo": "SAS Consumer - Kordev (Asana)",
+  "fecha": "2026-11-27",
+  "hora": "15:30",
+  "area": "Operaciones",
+  "participantes": ["Luis Felipe Rodríguez Martínez", "Gary Esteban Franco Bernal"],
+  "temas": ["qco 2027", "turnos", "asistencia", "logística evento", "transporte"],
+  "objetivo": "Planificar la asistencia y la logística de Operaciones al QCO 2027 (26 y 27 de enero), anticipando participación, presupuesto y turnos.",
+  "resultado": "Se definió un modelo base 50/50 entre backoffice y servicios en vivo, sujeto a la programación de Clau. El sitio sigue por confirmar (Hilton o Ágora).",
+  "validacion": { "reunion_adicional": false, "slack": false, "infografia": false, "seguimiento": false },
+  "acciones": [
+    { "accion": "Hablar con Operaciones para cuadrar el QCO 2027 (prioritaria)", "responsable": "Martín Méndez", "fecha": "Sin definir", "dependencias": "Ninguna indicada" },
+    { "accion": "Definir si se usan criterios como top performers", "responsable": "Líderes de operaciones", "fecha": "Sin definir", "dependencias": "Debe ocurrir antes de ir con Clau" },
+    { "accion": "Cuadrar el mallado de turnos con Clau", "responsable": "Martín Méndez", "fecha": "Sin definir", "dependencias": "Definiciones de los líderes de operaciones" },
+    { "accion": "Entregar programación de asistencia según volumen y carga", "responsable": "Clau", "fecha": "Sin definir", "dependencias": "Habilita todas las demás acciones" },
+    { "accion": "Alinear con Clau la distribución del backoffice", "responsable": "Martín Méndez", "fecha": "Sin definir", "dependencias": "Programación de Clau" },
+    { "accion": "Definir el servicio de transporte", "responsable": "Martín Méndez", "fecha": "Sin definir", "dependencias": "Turnos de Clau; sitio por confirmar" },
+    { "accion": "Unir a los líderes las wikis del evento y dar el headshot", "responsable": "Martín Méndez", "fecha": "Sin definir", "dependencias": "" },
+    { "accion": "Reutilizar el archivo de Elena del año pasado como base", "responsable": "Sin definir", "fecha": "Sin definir", "dependencias": "Adaptarlo con la gente nueva" }
+  ],
+  "notion_url": "https://app.notion.com/p/425eace5de2b81a0b448d45ce65b0bf9"
 }}];
